@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="pages/index.css">
+  <title>Заполнение обращения | Гражданин-поэт</title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="wrapper wrapper_section_header">
+      <header class="header page__header">
+        <a
+          href="#"
+          class="link logo logo_place_header"
+        >Гражданин поэт</a>
+      </header>
+    </div>
+    <main class="content">
+      <section class="application page__application">
+        <div class="application__top">
+          <button
+            class="application__btn-back"
+            type="button"
+            aria-label="Назад"
+          ></button>
+          <p class="application__counter">1/3</p>
+        </div>
+        <h2 class="title application__title">Какого рода проблема?</h2>
+        <form
+          name="surveyForm"
+          class="form-survey"
+        >
+          <fieldset class="fieldset form-survey__fieldset">
+            <ul class="form-survey__list">
+              <li class="form-survey__item">
+                <input
+                  name="problemCommunal"
+                  type="button"
+                  value="Коммунальная"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="problemEconomic"
+                  type="button"
+                  value="Экономическая"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="problemSocial"
+                  type="button"
+                  value="Социальная"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="problemUrban"
+                  type="button"
+                  value="Урбанистическая"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="problemPolitic"
+                  type="button"
+                  value="Политическая"
+                  class="btn btn_type_light"
+                >
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="fieldset form-survey__fieldset">
+            <h3 class="title title_size_medium">Что не так?</h3>
+            <ul class="form-survey__list">
+              <li class="form-survey__item">
+                <input
+                  name="subjectElectric"
+                  type="button"
+                  value="Электричество"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="subjectWater"
+                  type="button"
+                  value="Водопровод"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="subjectNeighbors"
+                  type="button"
+                  value="Соседи"
+                  class="btn btn_type_light"
+                >
+              </li>
+              <li class="form-survey__item">
+                <input
+                  name="subjectPayments"
+                  type="button"
+                  value="Платежи"
+                  class="btn btn_type_light"
+                >
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+        <input
+          type="button"
+          class="btn application__control"
+          value="Далее"
+        >
+      </section>
+    </main>
+    <div class="wrapper wrapper_section_footer">
+      <footer class="footer page__footer">
+        <p class="footer__copyright">© 2020. Group 39</p>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.form-strokes__item {
+  display: flex;
+  margin-top: 16px;
+}
+
+.form-strokes__item:first-of-type {
+  margin-top: 0;
+}

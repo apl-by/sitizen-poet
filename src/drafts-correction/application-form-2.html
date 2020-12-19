@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="pages/index.css">
+  <title>Заполнение обращения | Гражданин-поэт</title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="wrapper wrapper_section_header">
+      <header class="header page__header">
+        <a
+          href="#"
+          class="link logo logo_place_header"
+        >Гражданин поэт</a>
+      </header>
+    </div>
+    <main class="content">
+      <section class="application page__application">
+        <div class="application__top">
+          <button
+            class="application__btn-back"
+            type="button"
+            aria-label="Назад"
+          ></button>
+          <p class="application__counter">2/3</p>
+        </div>
+        <h2 class="title application__title">Введите обращение</h2>
+        <p class="application__subtitle">Не больше 6 слов</p>
+        <form
+          name="userWordsForm"
+          class="form-findwords"
+        >
+          <input
+            type="text"
+            class="form-findwords__input"
+            value="домаш скамей свет"
+          >
+          <input
+            type="button"
+            class="form-findwords__btn btn"
+            value="Найти строки"
+          >
+        </form>
+        <form
+          name="strokesForm"
+          class="form-strokes"
+        >
+          <div class="form-strokes__columns">
+            <ul class="form-strokes__list">
+              <li class="form-strokes__item">
+                <input
+                  type="text"
+                  class="form-strokes__input"
+                  value="Блажен, кто под крылом своих домашних лар"
+                >
+                <input
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-refresh"
+                >
+                <input
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-push"
+                >
+              </li>
+              <li class="form-strokes__item">
+                <input
+                  type="text"
+                  class="form-strokes__input"
+                  value="у подъезда, на  скамейке"
+                >
+                <input
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-refresh"
+                >
+                <input
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-push"
+                >
+              </li>
+              <li class="form-strokes__item">
+                <input
+                  type="text"
+                  class="form-strokes__input"
+                  value="Людмила светлый взор возводит,"
+                >
+                <input
+                  type="button"
+                  class=" btn btn_type_square form-strokes__btn-refresh"
+                >
+                <input
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-push"
+                >
+              </li>
+            </ul>
+            <div class="assembly form-strokes__assembly">
+              <ul class="assembly__list">
+                <li class="assembly__item">
+                  <p class="assembly__text">Блажен, кто под крылом своих
+                    ДОМАШних лар</p>
+                  <button
+                    type="button"
+                    class="assembly__btn-close"
+                  ></button>
+                </li>
+                <li class="assembly__item">
+                  <p class="assembly__text">у подъезда, на СКАМЕЙке</p>
+                  <button
+                    type="button"
+                    class="assembly__btn-close"
+                  ></button>
+                </li>
+                <li class="assembly__item">
+                  <p class="assembly__text">Людмила светлый взор возводит,</p>
+                  <button
+                    type="button"
+                    class="assembly__btn-close"
+                  ></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <input
+          type="button"
+          class="application__control btn"
+          value="Далее"
+        >
+      </section>
+    </main>
+    <div class="wrapper wrapper_section_footer">
+      <footer class="footer page__footer">
+        <p class="footer__copyright">© 2020. Group 39</p>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
