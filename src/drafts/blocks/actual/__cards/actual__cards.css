@@ -1,0 +1,9 @@
+.actual__cards {
+  display: grid;
+  margin-top: 48px;
+  padding-left: 0;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 42px 30px;
+}
