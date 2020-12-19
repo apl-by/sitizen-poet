@@ -1,0 +1,5 @@
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+}

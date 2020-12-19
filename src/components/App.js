@@ -10,10 +10,11 @@ function App() {
   return (
     <div className="page">
       <Header />
-      <Main></Main>
+      <Main>
+        <MainPage />
+      </Main>
       <Footer />
 
-      <MainPage />
       <TagPage />
       <InputPage />
       <SubmitPage />
