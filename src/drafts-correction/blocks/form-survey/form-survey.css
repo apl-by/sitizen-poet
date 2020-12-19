@@ -1,3 +1,5 @@
 .form-survey {
-  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
 }

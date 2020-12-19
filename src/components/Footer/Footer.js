@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Footer({}) {
+function Footer() {
   const [year, setYear] = useState(2020);
 
   const date = new Date();

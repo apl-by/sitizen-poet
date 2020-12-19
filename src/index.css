@@ -37,6 +37,8 @@
 @import url(./blocks/application/__control/application__control.css);
 
 @import url(./blocks/form-survey/form-survey.css);
+@import url(./blocks/form-survey/__custom/form-survey__custom.css);
+@import url(./blocks/form-survey/__radio/form-survey__radio.css);
 @import url(./blocks/form-survey/__list/form-survey__list.css);
 @import url(./blocks/form-survey/__item/form-survey__item.css);
 @import url(./blocks/form-survey/__fieldset/form-survey__fieldset.css);
