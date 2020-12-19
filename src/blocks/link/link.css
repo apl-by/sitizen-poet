@@ -1,5 +1,5 @@
 .link {
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
   text-decoration: none;
   opacity: 1;
   color: black;
@@ -7,5 +7,5 @@
 
 .link:hover {
   cursor: pointer;
-  opacity: .7;
+  opacity: 0.7;
 }
