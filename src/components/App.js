@@ -3,6 +3,7 @@ import MainPage from "./MainPage/MainPage";
 import Footer from "./Footer/Footer";
 import TagPage from "./TagPage/TagPage";
 import InputPage from "./InputPage/InputPage";
+import SubmitPage from "./SubmitPage/SubmitPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       <TagPage />
       <InputPage />
+      <SubmitPage />
     </div>
   );
 }
