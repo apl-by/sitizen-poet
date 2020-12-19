@@ -2,8 +2,7 @@
   font-family: "RodchenkoCTT";
 
   src: url("../vendor/fonts/rodchenkoctt.woff2") format("woff2"),
-    url("../vendor/fonts/rodchenkoctt.woff") format("woff"),
-    url("../vendor/fonts/rodchenkoctt.ttf") format("truetype"),
+    url("../vendor/fonts/rodchenkoctt.woff") format("woff"), url("../vendor/fonts/rodchenkoctt.ttf") format("truetype"),
     url("../vendor/fonts/rodchenkoctt.eot") format("eot");
 }
 

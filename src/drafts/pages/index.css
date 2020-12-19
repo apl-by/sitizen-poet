@@ -8,10 +8,9 @@
 @import url(../blocks/page/__hero/page__hero.css);
 @import url(../blocks/page/__footer/page__footer.css);
 @import url(../blocks/page/__application/page__application.css);
-
-@import url(../blocks/wrapper/wrapper.css);
-@import url(../blocks/wrapper/_section/wrapper_section_header.css);
-@import url(../blocks/wrapper/_section/wrapper_section_footer.css);
+@import url(../blocks/page/__how-it-works/page__how-it-works.css);
+@import url(../blocks/page/__actual/page__actual.css);
+@import url(../blocks/page/__done/page__done.css);
 
 @import url(../blocks/link/link.css);
 @import url(../blocks/title/title.css);
@@ -41,6 +40,8 @@
 @import url(../blocks/application/__control/application__control.css);
 
 @import url(../blocks/form-survey/form-survey.css);
+@import url(../blocks/form-survey/__custom/form-survey__custom.css);
+@import url(../blocks/form-survey/__radio/form-survey__radio.css);
 @import url(../blocks/form-survey/__list/form-survey__list.css);
 @import url(../blocks/form-survey/__item/form-survey__item.css);
 @import url(../blocks/form-survey/__fieldset/form-survey__fieldset.css);
@@ -79,3 +80,26 @@
 @import url(../blocks/preview/__body/preview__body.css);
 @import url(../blocks/preview/__title/preview__title.css);
 @import url(../blocks/preview/__footer/preview__footer.css);
+
+@import url(../blocks/how-it-works/how-it-works.css);
+@import url(../blocks/how-it-works/__title/how-it-works__title.css);
+@import url(../blocks/how-it-works/__content/how-it-works__content.css);
+
+@import url(../blocks/actual/actual.css);
+@import url(../blocks/actual/__cards/actual__cards.css);
+@import url(../blocks/actual/__title/actual__title.css);
+@import url(../blocks/actual/__btn/actual__btn.css);
+
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__image/card__image.css);
+@import url(../blocks/card/__image/_size/card__image_size_l.css);
+@import url(../blocks/card/_size/card_size_s.css);
+@import url(../blocks/card/_size/card_size_m.css);
+@import url(../blocks/card/_size/card_size_l.css);
+@import url(../blocks/card/_size/card_size_xl.css);
+@import url(../blocks/card/__body/card__body.css);
+
+@import url(../blocks/done/done.css);
+@import url(../blocks/done/__title/done__title.css);
+@import url(../blocks/done/__cards/done__cards.css);
+@import url(../blocks/done/__btn/done__btn.css);
