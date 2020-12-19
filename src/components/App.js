@@ -2,6 +2,7 @@ import Header from "./Header/Header";
 import MainPage from "./MainPage/MainPage";
 import Footer from "./Footer/Footer";
 import TagPage from "./TagPage/TagPage";
+import InputPage from "./InputPage/InputPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Footer />
 
       <TagPage />
+      <InputPage />
     </div>
   );
 }
