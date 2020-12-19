@@ -1,0 +1,4 @@
+.form-bio__fieldset {
+  display: flex;
+  flex-direction: column;
+}
