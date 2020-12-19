@@ -1,7 +1,7 @@
 .application__btn-back {
   width: 43px;
   height: 27px;
-  transition: opacity .1s ease-out;
+  transition: opacity 0.1s ease-out;
   border: 0;
   background-color: transparent;
   background-image: url(../../../images/btn-back.svg);
@@ -11,5 +11,5 @@
 }
 
 .application__btn-back:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
