@@ -1,0 +1,7 @@
+.form-survey__item {
+  margin-right: 30px;
+}
+
+.form-survey__item:last-child {
+  margin-right: 0;
+}
