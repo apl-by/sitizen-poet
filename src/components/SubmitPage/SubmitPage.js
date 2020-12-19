@@ -72,7 +72,7 @@ function SubmitPage() {
               <p className="preview__signature">/ В.В. Маяковский</p>
             </div>
           </div>
-          <input type="submit" className="application__control btn" value="Далее" />
+          <input type="submit" className="application__control btn" value="Отправить" />
         </div>
       </form>
     </section>
