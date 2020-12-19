@@ -1,0 +1,6 @@
+.footer {
+  display: flex;
+  /* max-width: 1110px; */
+  color: #fff;
+  background-color: #000;
+}

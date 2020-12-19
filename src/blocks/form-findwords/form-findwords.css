@@ -1,0 +1,4 @@
+.form-findwords {
+  display: flex;
+  flex-direction: column;
+}

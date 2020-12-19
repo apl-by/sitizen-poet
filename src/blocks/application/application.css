@@ -1,0 +1,6 @@
+.application {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  min-height: calc(100vh - 200px);
+}
