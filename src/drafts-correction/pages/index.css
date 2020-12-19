@@ -10,7 +10,6 @@
 @import url(../blocks/page/__application/page__application.css);
 
 @import url(../blocks/wrapper/wrapper.css);
-@import url(../blocks/wrapper/_section/wrapper_section_header.css);
 @import url(../blocks/wrapper/_section/wrapper_section_footer.css);
 
 @import url(../blocks/link/link.css);
