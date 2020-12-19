@@ -6,3 +6,8 @@
   font-weight: 400;
   font-style: italic;
 }
+
+.btn:active {
+  color: #fff;
+  background-color: #d00000;
+}

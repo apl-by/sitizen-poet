@@ -1,4 +1,4 @@
-function MainPage({}) {
+function MainPage() {
   return (
     <main className="content">
       <section className="hero page__hero">
