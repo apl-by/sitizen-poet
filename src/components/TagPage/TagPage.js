@@ -1,10 +1,11 @@
-import ButtonRect from "../ButtonRect";
+import ButtonRect from "../Buttons/ButtonRect";
+import ButtonArrow from "../Buttons/ButtonArrow";
 
 function TagPage() {
   return (
     <section className="application page__application">
       <div className="application__top">
-        <button className="application__btn-back" type="button" aria-label="Назад"></button>
+        <ButtonArrow />
         <p className="application__counter">1/3</p>
       </div>
 
