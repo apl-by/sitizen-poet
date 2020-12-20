@@ -3,14 +3,14 @@ import imgM from "../../images/m.png";
 import imgL from "../../images/l.png";
 import imgXL from "../../images/xl.png";
 
+import ButtonRect from "../ButtonRect";
+
 function MainPage() {
   return (
     <>
       <section className="hero page__hero">
         <h1 className="title hero__title">Сайт гражданских инициатив</h1>
-        <button className="btn hero__button" type="button">
-          Создать инициативу
-        </button>
+        <ButtonRect type="button" element="hero__button" name="Создать инициативу" />
       </section>
       <section className="how-it-works page__how-it-works">
         <h2 className="title how-it-works__title">Как это работает</h2>
@@ -40,7 +40,7 @@ function MainPage() {
             <div className="card__body"></div>
           </article>
         </ul>
-        <button className="btn actual__btn">Смотреть ещё</button>
+        <ButtonRect type="button" element="actual__btn" name="Смотреть ещё" />
       </section>
       <section className="done page__done">
         <h2 className="title done__title">Уже приняты</h2>
@@ -54,7 +54,7 @@ function MainPage() {
             <div className="card__body"></div>
           </article>
         </ul>
-        <button className="btn done__btn">Смотреть ещё</button>
+        <ButtonRect type="button" element="done__btn" name="Смотреть ещё" />
       </section>
     </>
   );
