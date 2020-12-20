@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
+
 import imgS from "../../images/s.png";
 import imgM from "../../images/m.png";
 import imgL from "../../images/l.png";
 import imgXL from "../../images/xl.png";
-
 import ButtonRect from "../Buttons/ButtonRect";
 
 function MainPage() {
@@ -10,7 +11,9 @@ function MainPage() {
     <>
       <section className="hero page__hero">
         <h1 className="title hero__title">Сайт гражданских инициатив</h1>
-        <ButtonRect type="button" element="hero__button" name="Создать инициативу" />
+        <Link to="/tags-selection" className="hero__button">
+          <ButtonRect type="button" name="Создать инициативу" />
+        </Link>
       </section>
       <section className="how-it-works page__how-it-works">
         <h2 className="title how-it-works__title">Как это работает</h2>

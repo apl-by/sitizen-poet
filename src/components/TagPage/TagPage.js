@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import ButtonRect from "../Buttons/ButtonRect";
 import ButtonArrow from "../Buttons/ButtonArrow";
 
@@ -56,10 +58,12 @@ function TagPage() {
             </label>
           </div>
         </fieldset>
-        <ButtonRect type="submit" element="application__control" name="Далее" />
+        <Link to="/user-input" className="application__control">
+        <ButtonRect type="submit" name="Далее" />
+        </Link>
       </form>
     </section>
-  );
+  )
 }
 
 export default TagPage;

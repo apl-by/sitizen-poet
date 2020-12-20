@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import ButtonRect from "../Buttons/ButtonRect";
 import ButtonArrow from "../Buttons/ButtonArrow";
 import InputForm from "./InputForm";
@@ -25,7 +27,9 @@ function InputPage() {
           </ul>
         </div>
       </div>
-      <ButtonRect type="button" element="application__control" name="Далее" />
+      <Link to="/user-submit" className="application__control">
+      <ButtonRect type="button" name="Далее" />
+      </Link>
     </section>
   );
 }
