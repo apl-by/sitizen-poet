@@ -1,3 +1,5 @@
+import ButtonRect from "../ButtonRect";
+
 function SubmitPage() {
   return (
     <section className="application page__application">
@@ -72,7 +74,7 @@ function SubmitPage() {
               <p className="preview__signature">/ В.В. Маяковский</p>
             </div>
           </div>
-          <input type="submit" className="application__control btn" value="Отправить" />
+          <ButtonRect type="submit" element="application__control" name="Отправить" />
         </div>
       </form>
     </section>

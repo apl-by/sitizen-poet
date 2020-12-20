@@ -1,3 +1,5 @@
+import ButtonRect from "../ButtonRect";
+
 function TagPage() {
   return (
     <section className="application page__application">
@@ -53,7 +55,7 @@ function TagPage() {
             </label>
           </div>
         </fieldset>
-        <input type="submit" className="btn application__control" value="Далее" />
+        <ButtonRect type="submit" element="application__control" name="Далее" />
       </form>
     </section>
   );

@@ -1,3 +1,5 @@
+import ButtonRect from "../ButtonRect";
+
 function InputPage() {
   return (
     <section className="application page__application">
@@ -9,7 +11,7 @@ function InputPage() {
       <p className="application__subtitle">Не больше 7 слов</p>
       <form name="userWordsForm" className="form-findwords">
         <input name="input" type="text" className="form-findwords__input" />
-        <input name="btn" type="submit" className="form-findwords__btn btn" value="Найти строки" />
+        <ButtonRect type="submit" element="form-findwords__btn" name="Найти строки" />
       </form>
 
       <div className="form-strokes form-strokes__columns">
@@ -29,9 +31,7 @@ function InputPage() {
           </ul>
         </div>
       </div>
-      <button type="button" className="application__control btn">
-        Далее
-      </button>
+      <ButtonRect type="button" element="application__control" name="Далее" />
     </section>
   );
 }
