@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sitizen-poet/static/css/main.d738b4d8.chunk.css",
-    "main.js": "/sitizen-poet/static/js/main.4f2ab9bc.chunk.js",
-    "main.js.map": "/sitizen-poet/static/js/main.4f2ab9bc.chunk.js.map",
+    "main.js": "/sitizen-poet/static/js/main.c84deb23.chunk.js",
+    "main.js.map": "/sitizen-poet/static/js/main.c84deb23.chunk.js.map",
     "runtime-main.js": "/sitizen-poet/static/js/runtime-main.c960d031.js",
     "runtime-main.js.map": "/sitizen-poet/static/js/runtime-main.c960d031.js.map",
     "static/js/2.c85f2883.chunk.js": "/sitizen-poet/static/js/2.c85f2883.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c960d031.js",
     "static/js/2.c85f2883.chunk.js",
     "static/css/main.d738b4d8.chunk.css",
-    "static/js/main.4f2ab9bc.chunk.js"
+    "static/js/main.c84deb23.chunk.js"
   ]
 }
