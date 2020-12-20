@@ -3,7 +3,7 @@ import imgM from "../../images/m.png";
 import imgL from "../../images/l.png";
 import imgXL from "../../images/xl.png";
 
-import ButtonRect from "../ButtonRect";
+import ButtonRect from "../Buttons/ButtonRect";
 
 function MainPage() {
   return (
