@@ -53,6 +53,7 @@
 @import url(./blocks/form-findwords/__btn/form-findwords__btn.css);
 
 @import url(./blocks/form-strokes/form-strokes.css);
+@import url(./blocks/form-strokes/__span/form-strokes__span.css);
 @import url(./blocks/form-strokes/__columns/form-strokes__columns.css);
 @import url(./blocks/form-strokes/__list/form-strokes__list.css);
 @import url(./blocks/form-strokes/__item/form-strokes__item.css);
@@ -105,3 +106,11 @@
 @import url(./blocks/done/__title/done__title.css);
 @import url(./blocks/done/__cards/done__cards.css);
 @import url(./blocks/done/__btn/done__btn.css);
+
+
+.span * {
+  font-size: 30px;
+  color: aliceblue;
+}
+
+

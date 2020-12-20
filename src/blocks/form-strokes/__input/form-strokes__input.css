@@ -1,8 +1,11 @@
 .form-strokes__input {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 380px;
+  height: 65px;
   margin: 0;
-  padding: 22px 16px;
+  /* padding: 22px 16px; */
   border: 0;
   background-color: white;
 }
