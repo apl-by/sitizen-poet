@@ -4,7 +4,8 @@ import imgS from "../../images/s.png";
 import imgM from "../../images/m.png";
 import imgL from "../../images/l.png";
 import imgXL from "../../images/xl.png";
-import ButtonRect from "../Buttons/ButtonRect";
+import ButtonLink from "../Buttons/ButtonLink";
+
 
 function MainPage() {
   return (
@@ -12,7 +13,7 @@ function MainPage() {
       <section className="hero page__hero">
         <h1 className="title hero__title">Сайт гражданских инициатив</h1>
         <Link to="/tags-selection" className="hero__button">
-          <ButtonRect type="button" name="Создать инициативу" />
+          <ButtonLink type="button" name="Создать инициативу" />
         </Link>
       </section>
       <section className="how-it-works page__how-it-works">
@@ -43,7 +44,7 @@ function MainPage() {
             <div className="card__body"></div>
           </article>
         </ul>
-        <ButtonRect type="button" element="actual__btn" name="Смотреть ещё" />
+        <ButtonLink type="button" element="actual__btn" name="Смотреть ещё" />
       </section>
       <section className="done page__done">
         <h2 className="title done__title">Уже приняты</h2>
@@ -57,7 +58,7 @@ function MainPage() {
             <div className="card__body"></div>
           </article>
         </ul>
-        <ButtonRect type="button" element="done__btn" name="Смотреть ещё" />
+        <ButtonLink type="button" element="done__btn" name="Смотреть ещё" />
       </section>
     </>
   );

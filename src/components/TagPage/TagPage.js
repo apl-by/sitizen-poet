@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import ButtonRect from "../Buttons/ButtonRect";
 import ButtonArrow from "../Buttons/ButtonArrow";
+import ButtonLink from "../Buttons/ButtonLink";
+
 
 function TagPage() {
   return (
@@ -59,7 +60,7 @@ function TagPage() {
           </div>
         </fieldset>
         <Link to="/user-input" className="application__control">
-        <ButtonRect type="submit" name="Далее" />
+          <ButtonLink type="submit" name="Далее" />
         </Link>
       </form>
     </section>
