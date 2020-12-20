@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: "http://buymebuyme.xyz",
+  baseUrl: "https://buymebuyme.xyz",
   headers: {
     "Content-Type": "application/json",
   },
