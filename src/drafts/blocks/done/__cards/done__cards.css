@@ -1,9 +1,0 @@
-.done__cards {
-  display: grid;
-  margin: 48px 0 0;
-  padding-left: 0;
-
-  grid-template-columns: 730px 350px;
-  grid-template-rows: auto;
-  grid-gap: 42px 30px;
-}
