@@ -3,6 +3,7 @@ import imgM from "../../images/m.png";
 import imgL from "../../images/l.png";
 import imgXL from "../../images/xl.png";
 import Button from "../Buttons/Button";
+import Card from "./Card";
 
 function MainPage({ history }) {
   return (
@@ -23,26 +24,11 @@ function MainPage({ history }) {
       <section className="actual page__actual">
         <h2 className="title actual__title">Актуальные инициативы</h2>
         <ul className="actual__cards">
-          <article className="card card_size_m">
-            <img className="card__image" alt="Изображение карточки" src={imgM} />
-            <div className="card__body"></div>
-          </article>
-          <article className="card card_size_m">
-            <img className="card__image" alt="Изображение карточки" src={imgM} />
-            <div className="card__body"></div>
-          </article>
-          <article className="card card_size_m">
-            <img className="card__image" alt="Изображение карточки" src={imgM} />
-            <div className="card__body"></div>
-          </article>
-          <article className="card card_size_s">
-            <img className="card__image" alt="Изображение карточки" src={imgS} />
-            <div className="card__body"></div>
-          </article>
-          <article className="card card_size_s">
-            <img className="card__image" alt="Изображение карточки" src={imgS} />
-            <div className="card__body"></div>
-          </article>
+          <Card modifier="card_size_m" size={imgM} />
+          <Card modifier="card_size_m" size={imgM} />
+          <Card modifier="card_size_m" size={imgM} />
+          <Card modifier="card_size_s" size={imgS} />
+          <Card modifier="card_size_s" size={imgS} />
         </ul>
         <Button
           type="button"
@@ -54,14 +40,8 @@ function MainPage({ history }) {
       <section className="done page__done">
         <h2 className="title done__title">Уже приняты</h2>
         <ul className="done__cards">
-          <article className="card card_size_xl">
-            <img className="card__image card__image_size_l" alt="Изображение карточки" src={imgXL} />
-            <div className="card__body"></div>
-          </article>
-          <article className="card card_size_l">
-            <img className="card__image card__image_size_l" alt="Изображение карточки" src={imgL} />
-            <div className="card__body"></div>
-          </article>
+          <Card modifier="card_size_xl" size={imgXL} />
+          <Card modifier="card_size_l" size={imgL} />
         </ul>
         <Button
           type="button"

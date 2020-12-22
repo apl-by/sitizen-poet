@@ -45,7 +45,7 @@ function InputPage({ onChange, value, onSearchSubmit, isRender, strArrays, split
         <p className="application__counter">2/3</p>
       </div>
       <h2 className="title application__title">Введите обращение</h2>
-      <p className="application__subtitle">Не больше 7 слов</p>
+      <p className="application__subtitle">Не больше 6 слов</p>
       <InputForm onChange={onChange} value={value} onSearchSubmit={onSearchSubmit} />
 
       <div className="form-strokes form-strokes__columns">
