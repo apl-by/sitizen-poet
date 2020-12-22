@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
-
 import ButtonArrow from "../Buttons/ButtonArrow";
-import ButtonLink from "../Buttons/ButtonLink";
+import Button from "../Buttons/Button";
 
+function TagPage({ history }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push("/user-input");
+  };
 
-function TagPage() {
   return (
     <section className="application page__application">
       <div className="application__top">
@@ -12,7 +14,7 @@ function TagPage() {
         <p className="application__counter">1/3</p>
       </div>
 
-      <form name="surveyForm" className="form-survey">
+      <form name="surveyForm" className="form-survey" onSubmit={handleSubmit}>
         <fieldset className="fieldset form-survey__fieldset">
           <h2 className="title application__title">Какого рода проблема?</h2>
           <div className="form-survey__list">
@@ -59,12 +61,10 @@ function TagPage() {
             </label>
           </div>
         </fieldset>
-        <Link to="/user-input" className="application__control">
-          <ButtonLink type="submit" name="Далее" />
-        </Link>
+        <Button type="submit" name="Далее" element="application__control" />
       </form>
     </section>
-  )
+  );
 }
 
 export default TagPage;

@@ -1,20 +1,20 @@
-import { Link } from 'react-router-dom';
-
 import imgS from "../../images/s.png";
 import imgM from "../../images/m.png";
 import imgL from "../../images/l.png";
 import imgXL from "../../images/xl.png";
-import ButtonLink from "../Buttons/ButtonLink";
+import Button from "../Buttons/Button";
 
-
-function MainPage() {
+function MainPage({ history }) {
   return (
     <>
       <section className="hero page__hero">
         <h1 className="title hero__title">Сайт гражданских инициатив</h1>
-        <Link to="/tags-selection" className="hero__button">
-          <ButtonLink type="button" name="Создать инициативу" />
-        </Link>
+        <Button
+          type="button"
+          name="Создать инициативу"
+          element="hero__button"
+          onClick={() => history.push("/tags-selection")}
+        />
       </section>
       <section className="how-it-works page__how-it-works">
         <h2 className="title how-it-works__title">Как это работает</h2>
@@ -44,7 +44,12 @@ function MainPage() {
             <div className="card__body"></div>
           </article>
         </ul>
-        <ButtonLink type="button" element="actual__btn" name="Смотреть ещё" />
+        <Button
+          type="button"
+          element="actual__btn"
+          name="Смотреть ещё"
+          onClick={() => alert("Страница с актуальными инициативами")}
+        />
       </section>
       <section className="done page__done">
         <h2 className="title done__title">Уже приняты</h2>
@@ -58,7 +63,12 @@ function MainPage() {
             <div className="card__body"></div>
           </article>
         </ul>
-        <ButtonLink type="button" element="done__btn" name="Смотреть ещё" />
+        <Button
+          type="button"
+          element="done__btn"
+          name="Смотреть ещё"
+          onClick={() => alert("Страница с принятыми инициативами")}
+        />
       </section>
     </>
   );

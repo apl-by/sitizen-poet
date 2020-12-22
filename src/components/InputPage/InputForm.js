@@ -1,17 +1,15 @@
-function InputForm({ onChange, value, onClick }) {
+import Button from "../Buttons/Button";
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-    onClick();
-    }
+function InputForm({ onChange, value, onSearchSubmit }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSearchSubmit();
+  };
 
   return (
-    <form name="userWordsForm" className="form-findwords">
+    <form name="userWordsForm" className="form-findwords" onSubmit={handleSubmit}>
       <input name="input" type="text" className="form-findwords__input" value={value} onChange={onChange} />
-
-      <button type="submit" className="form-findwords__btn btn" onClick={handleSubmit}>
-      Найти строки
-    </button>
+      <Button type="submit" name="Найти строки" element="form-findwords__btn" />
     </form>
   );
 }
