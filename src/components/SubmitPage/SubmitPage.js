@@ -1,13 +1,19 @@
 import ButtonArrow from "../Buttons/ButtonArrow";
+import Button from "../Buttons/Button";
 
-function SubmitPage() {
+function SubmitPage({ history }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push("/");
+  };
+
   return (
     <section className="application page__application">
       <div className="application__top">
         <ButtonArrow />
         <p className="application__counter">3/3</p>
       </div>
-      <form name="bioForm" className="form-bio">
+      <form name="bioForm" className="form-bio" onSubmit={handleSubmit}>
         <div className="form-bio__data">
           <h2 className="title">Оформите документ</h2>
           <fieldset className="fieldset form-bio__fieldset">
@@ -16,7 +22,7 @@ function SubmitPage() {
           </fieldset>
           <fieldset className="fieldset form-bio__fieldset">
             <h3 className="title title_size_medium form-bio__title">Введите ваши данные</h3>
-            <label for="fio" className="form-bio__label">
+            <label htmlFor="fio" className="form-bio__label">
               ФИО*
             </label>
             <input
@@ -26,7 +32,7 @@ function SubmitPage() {
               placeholder="Маяковский Владимир Владимирович"
               className="form-bio__input"
             />
-            <label for="address" className="form-bio__label">
+            <label htmlFor="address" className="form-bio__label">
               Адрес*
             </label>
             <input
@@ -36,7 +42,7 @@ function SubmitPage() {
               placeholder="Улица, дом, город, область"
               className="form-bio__input"
             />
-            <label for="tel-number" className="form-bio__label">
+            <label htmlFor="tel-number" className="form-bio__label">
               Телефон*
             </label>
             <input
@@ -46,7 +52,7 @@ function SubmitPage() {
               placeholder="+7 XXX XXX-XX-XX"
               className="form-bio__input"
             />
-            <label for="date" className="form-bio__label">
+            <label htmlFor="date" className="form-bio__label">
               Дата обращения
             </label>
             <input type="date" name="dateInput" id="date" placeholder="ДД.ММ.ГГГГ" className="form-bio__input" />
@@ -74,9 +80,7 @@ function SubmitPage() {
               <p className="preview__signature">/ В.В. Маяковский</p>
             </div>
           </div>
-          <button type="submit" className="application__control btn" >
-          Отправить
-    </button>
+          <Button type="submit" name="Отправить" element="application__control" />
         </div>
       </form>
     </section>
