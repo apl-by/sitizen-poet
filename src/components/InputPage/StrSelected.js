@@ -1,10 +1,14 @@
 import ButtonDelete from "../Buttons/ButtonDelete";
 
-function StrSelected() {
+function StrSelected({ children, isSelected, onDelete, id }) {
+  const handleClickDelete = () => {
+    onDelete(id, false);
+  };
+
   return (
-    <li className="assembly__item">
-      <p className="assembly__text">Блажен, кто под крылом своих ДОМАШних лар</p>
-      <ButtonDelete />
+    <li className={`assembly__item ${!isSelected && "assembly__item_hidden"}`}>
+      {children}
+      <ButtonDelete onClick={handleClickDelete} />
     </li>
   );
 }

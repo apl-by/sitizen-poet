@@ -65,6 +65,7 @@
 @import url(./blocks/assembly/assembly.css);
 @import url(./blocks/assembly/__list/assembly__list.css);
 @import url(./blocks/assembly/__item/assembly__item.css);
+@import url(./blocks/assembly/__item/_hidden/assembly__item_hidden.css);
 @import url(./blocks/assembly/__text/assembly__text.css);
 @import url(./blocks/assembly/__btn-close/assembly__btn-close.css);
 
@@ -107,10 +108,7 @@
 @import url(./blocks/done/__cards/done__cards.css);
 @import url(./blocks/done/__btn/done__btn.css);
 
-
 .span * {
   font-size: 30px;
   color: aliceblue;
 }
-
-
