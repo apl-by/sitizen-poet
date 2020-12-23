@@ -2,7 +2,8 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { api } from "../utils/api";
-import { regexpInputValid } from "../utils/constants";
+import { getCurrentItem } from "../utils/utils";
+import { regexpInputValid, templateArr } from "../utils/constants";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
@@ -18,37 +19,55 @@ function App() {
 
   const [currentInput, setCurrentInput] = useState("");
   const [submitedInput, setSubmitedInput] = useState("");
-  const [splitedInput, setSplitedInput] = useState([]);
 
-  function handleChangeInput(e) {
+  const handleChangeInput = (e) => {
     if (!regexpInputValid.test(e.target.value)) {
-      alert("Допускается:\n-ввод кириллицы;\n-слова разделяются одним пробелом;\n-не более 7 слов.");
+      alert("Допускается:\n-ввод кириллицы;\n-слова разделяются одним пробелом;\n-не более 6 слов.");
       return;
     }
     setCurrentInput(e.target.value);
-  }
-
-  useEffect(() => {
-    const array = submitedInput.split(" ");
-    setSplitedInput(array);
-  }, [submitedInput]);
+  };
 
   //-------- Запрос  на сервер за стихами---------------------------
-  const [promisesRes, setPromisesRes] = useState([]);
-  const [isRender, setIsRender] = useState(false);
+  const [requestObj, setRequestObj] = useState({});
+  const [wasSearch, setWasSearch] = useState(false);
+  const [currentArr, setCurrentArr] = useState({});
 
+  // ----- Обновление одной строки-----------
+  const refreshString = (id) => {
+    const cloneArr = [...currentArr];
+    const newItem = getCurrentItem(requestObj[id]);
+    cloneArr.splice(id, 1, newItem);
+    setCurrentArr(cloneArr);
+  };
+
+  // ----------Получение строк для отрисовки (всех сразу, при введении слов в основной input )------
+  useEffect(() => {
+    if (!wasSearch) return;
+    const newArr = [];
+
+    for (let key in requestObj) {
+      if (key !== "tagsArr") {
+        const newItem = getCurrentItem(requestObj[key]);
+        newArr.push(newItem);
+      }
+    }
+    setCurrentArr(newArr);
+    setWasSearch(false);
+  }, [requestObj, wasSearch]);
+
+  // -------------Первичный поиск по массиву введенных слов--------------
   const handleSearch = () => {
     if (submitedInput === currentInput.replace(/\s?$/, "")) {
       return;
     }
 
     const str = currentInput.replace(/\s?$/, "");
-    const array = str.split(" ");
+    const arrayInputTags = str.split(" ");
 
     setSubmitedInput(str);
-    setSplitedInput(array);
 
-    const promises = array.map((item) => {
+    const promises = arrayInputTags.map((item) => {
       return api
         .getPoemStrings(item)
         .then((res) => {
@@ -62,10 +81,49 @@ function App() {
 
     Promise.all(promises)
       .then((res) => {
-        setPromisesRes(res);
-        setIsRender(true);
+        const requestRes = res.reduce(
+          (prev, item, index) => {
+            if (item[0]) {
+              prev[index] = {
+                id: index,
+                exist: true,
+                tag: arrayInputTags[index],
+                arrayStrs: item,
+                arrLength: item.length,
+              };
+              return prev;
+            } else {
+              prev[index] = {
+                id: index,
+                exist: false,
+                tag: arrayInputTags[index],
+                arrayStrs: templateArr,
+                arrLength: templateArr.length,
+              };
+              return prev;
+            }
+          },
+          { tagsArr: arrayInputTags }
+        );
+        setRequestObj(requestRes);
+        setWasSearch(true);
       })
       .catch((err) => alert(err));
+  };
+
+  // ---------------Добавление/удаление строк в правое окно
+  const [isSelected, setIsSelected] = useState({});
+  const [strForSubmit, setStrForSubmit] = useState({});
+
+  console.log(strForSubmit);
+
+  const handleSelection = (id, boolean, upperCase) => {
+    const selectedStr = { ...isSelected };
+    const strUpperCase = { ...strForSubmit };
+    boolean ? (selectedStr[id] = true) : (selectedStr[id] = false);
+    boolean ? (strUpperCase[id] = upperCase) : delete strUpperCase[id];
+    setStrForSubmit(strUpperCase);
+    setIsSelected(selectedStr);
   };
 
   return (
@@ -82,12 +140,13 @@ function App() {
           <Route path="/user-input">
             <InputPage
               onChange={handleChangeInput}
+              onRefresh={refreshString}
+              onAddDelete={handleSelection}
+              isSelected={isSelected}
               value={currentInput}
               onSearchSubmit={handleSearch}
-              isRender={isRender}
-              strArrays={promisesRes}
-              splitedInput={splitedInput}
               history={history}
+              currentArr={currentArr}
             />
           </Route>
           <Route path="/user-submit">

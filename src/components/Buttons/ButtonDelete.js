@@ -1,5 +1,5 @@
-function ButtonDelete() {
-  return <button type="button" className="assembly__btn-close"></button>;
+function ButtonDelete({ onClick }) {
+  return <button type="button" className="assembly__btn-close" onClick={onClick}></button>;
 }
 
 export default ButtonDelete;

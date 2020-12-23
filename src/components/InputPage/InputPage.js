@@ -1,41 +1,25 @@
+import { useEffect, useState } from "react";
+
 import Button from "../Buttons/Button";
 import ButtonArrow from "../Buttons/ButtonArrow";
 import InputForm from "./InputForm";
 import StrChoice from "./StrChoice";
 import StrSelected from "./StrSelected";
 
-function InputPage({ onChange, value, onSearchSubmit, isRender, strArrays, splitedInput, history }) {
-  // ------------Получаем рандомную строку с словом (на доработке)--------------
+function InputPage({ onChange, value, onSearchSubmit, history, currentArr, onRefresh, onAddDelete, isSelected }) {
+  // ------------Для вставки строк в разметку с тегами--------------------
 
-  function randomString(array, index) {
-    const rand = Math.floor(Math.random() * array.length);
-    const str = array[rand] || `To be or xxx not to be(на доработке)`;
-    const safetyStr = str.replace(/<|>/g, "'");
-    const regexpFull = new RegExp(`${splitedInput[index]}`, "i");
-    // const regexpSpell = getSpellRgx(splitedInput[index]);
-    let modifiedString;
-    if (regexpFull.test(safetyStr)) {
-      modifiedString = safetyStr.replace(regexpFull, `<span class="form-strokes__span">${splitedInput[index]}</span>`);
-      return modifiedString;
-    }
-    // else if (regexpSpell.test(safetyStr)) {
-    //   modifiedString = getStrForReplace(safetyStr, splitedInput[index]);
-    //   return modifiedString;
-    // }
-    else {
-      modifiedString = safetyStr.replace("xxx", `<span class="form-strokes__span">${splitedInput[index]}</span>`);
-      return modifiedString;
-    }
+  function createMarkup(strForRender) {
+    return { __html: strForRender };
   }
 
-  // ------------Для вставки строк в разметку с тегом <span>--------------------
-
-  function createMarkup(item, index) {
-    return { __html: randomString(item, index) };
-  }
-
-  function MyComponent(item, index) {
-    return <p dangerouslySetInnerHTML={createMarkup(item, index)} className="form-strokes__input" />;
+  function MyComponent(strForRender, boolean) {
+    return (
+      <p
+        dangerouslySetInnerHTML={createMarkup(strForRender)}
+        className={boolean ? "form-strokes__input" : "assembly__text"}
+      />
+    );
   }
 
   return (
@@ -50,18 +34,32 @@ function InputPage({ onChange, value, onSearchSubmit, isRender, strArrays, split
 
       <div className="form-strokes form-strokes__columns">
         <ul className="form-strokes__list">
-          {isRender &&
-            strArrays.map((item, index) => {
+          {currentArr[0] &&
+            currentArr.map((item) => {
               return (
-                <StrChoice item={item} index={index} key={index}>
-                  {MyComponent(item, index)}
+                <StrChoice
+                  key={item.id}
+                  onRefresh={onRefresh}
+                  onAdd={onAddDelete}
+                  id={item.id}
+                  exist={item.exist}
+                  strUpperCaseTag={item.strUpperCaseTag}
+                >
+                  {MyComponent(item.strForRender, true)}
                 </StrChoice>
               );
             })}
         </ul>
         <div className="assembly form-strokes__assembly">
           <ul className="assembly__list">
-            <StrSelected />
+            {currentArr[0] &&
+              currentArr.map((item) => {
+                return (
+                  <StrSelected key={item.id} isSelected={isSelected[item.id]} onDelete={onAddDelete} id={item.id}>
+                    {MyComponent(item.strForRender, false)}
+                  </StrSelected>
+                );
+              })}
           </ul>
         </div>
       </div>
