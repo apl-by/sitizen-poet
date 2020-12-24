@@ -3,7 +3,7 @@
   align-items: center;
   width: 540px;
   height: 65px;
-  margin-top: 16px;
+  margin: 16px 0;
 }
 
 .form-strokes__item:first-of-type {

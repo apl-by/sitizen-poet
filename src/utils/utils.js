@@ -20,7 +20,7 @@ export function getCurrentItem(item) {
     return newItem;
   } else {
     const str = item.arrayStrs[getRandomInd(item.arrLength)];
-    const strForRender = str.replace("tagReplace", `${item.tag}`);
+    const strForRender = str.replace("tagReplace", `[${item.tag}]`);
     const newItem = { id: item.id, strForRender: strForRender, tag: item.tag, exist: false };
     return newItem;
   }

@@ -32,6 +32,8 @@ function App() {
   const [requestObj, setRequestObj] = useState({});
   const [wasSearch, setWasSearch] = useState(false);
   const [currentArr, setCurrentArr] = useState({});
+  console.log(requestObj);
+  console.log(currentArr);
 
   // ----- Обновление одной строки-----------
   const refreshString = (id) => {
@@ -108,14 +110,16 @@ function App() {
         setRequestObj(requestRes);
         setWasSearch(true);
       })
-      .catch((err) => alert(err));
+      .catch((err) => alert(err))
+      .finally(() => {
+        setStrForSubmit({});
+        setIsSelected({});
+      });
   };
 
   // ---------------Добавление/удаление строк в правое окно
   const [isSelected, setIsSelected] = useState({});
   const [strForSubmit, setStrForSubmit] = useState({});
-
-  console.log(strForSubmit);
 
   const handleSelection = (id, boolean, upperCase) => {
     const selectedStr = { ...isSelected };
@@ -124,6 +128,74 @@ function App() {
     boolean ? (strUpperCase[id] = upperCase) : delete strUpperCase[id];
     setStrForSubmit(strUpperCase);
     setIsSelected(selectedStr);
+  };
+
+  // -----------
+
+  const [isEdit, setIsEdit] = useState({});
+
+  const handleEdit = (id) => {
+    const editStr = { ...isEdit };
+    editStr[id] = true;
+    setIsEdit(editStr);
+  };
+
+  const handleNewSearch = (tag, newTag, id) => {
+    if (tag === newTag || newTag === "") {
+      const editStr = { ...isEdit };
+      editStr[id] = false;
+      setIsEdit(editStr);
+      return;
+    }
+
+    api
+      .getPoemStrings(newTag)
+      .then((res) => {
+        const arrStrings = res.map((i) => {
+          return i.fields.text[0];
+        });
+        const newObj = {};
+
+        if (arrStrings[0]) {
+          newObj[id] = {
+            id: id,
+            exist: true,
+            tag: newTag,
+            arrayStrs: arrStrings,
+            arrLength: arrStrings.length,
+          };
+        } else {
+          newObj[id] = {
+            id: id,
+            exist: false,
+            tag: newTag,
+            arrayStrs: templateArr,
+            arrLength: templateArr.length,
+          };
+        }
+
+        const cloneRequestObj = { ...requestObj };
+        cloneRequestObj[id] = newObj[id];
+        setRequestObj(cloneRequestObj);
+
+        const cloneCurrentArr = [...currentArr];
+        const newItem = getCurrentItem(newObj[id]);
+        cloneCurrentArr.splice(id, 1, newItem);
+        setCurrentArr(cloneCurrentArr);
+      })
+      .catch((err) => alert(err))
+      .finally(() => {
+        const editStr = { ...isEdit };
+        editStr[id] = false;
+        setIsEdit(editStr);
+      });
+
+    const cloneInput = currentInput.replace(/\s?$/, "");
+    const arrayInputTags = cloneInput.split(" ");
+    arrayInputTags.splice(id, 1, newTag);
+    const input = arrayInputTags.join(" ");
+    setCurrentInput(input);
+    setSubmitedInput(input);
   };
 
   return (
@@ -142,6 +214,9 @@ function App() {
               onChange={handleChangeInput}
               onRefresh={refreshString}
               onAddDelete={handleSelection}
+              onNewSearch={handleNewSearch}
+              onEdit={handleEdit}
+              isEdit={isEdit}
               isSelected={isSelected}
               value={currentInput}
               onSearchSubmit={handleSearch}
