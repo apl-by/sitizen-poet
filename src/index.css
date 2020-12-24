@@ -58,8 +58,11 @@
 @import url(./blocks/form-strokes/__list/form-strokes__list.css);
 @import url(./blocks/form-strokes/__item/form-strokes__item.css);
 @import url(./blocks/form-strokes/__input/form-strokes__input.css);
+@import url(./blocks/form-strokes/__input/_size_l/form-strokes__input_size_l.css);
 @import url(./blocks/form-strokes/__btn-refresh/form-strokes__btn-refresh.css);
 @import url(./blocks/form-strokes/__btn-push/form-strokes__btn-push.css);
+@import url(./blocks/form-strokes/__btn-edit/form-strokes__btn-edit.css);
+@import url(./blocks/form-strokes/__btn-confirm/form-strokes__btn-confirm.css);
 @import url(./blocks/form-strokes/__assembly/form-strokes__assembly.css);
 
 @import url(./blocks/assembly/assembly.css);

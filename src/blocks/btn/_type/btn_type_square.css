@@ -1,6 +1,10 @@
 .btn_type_square {
-  width: 65px;
-  height: 65px;
+  width: 67px;
+  height: 67px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.btn_type_square:disabled {
+  opacity: 0.5;
 }

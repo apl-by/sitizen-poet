@@ -1,0 +1,4 @@
+.form-strokes__btn-edit {
+  background-image: url(../../../images/btn-edit.svg);
+  flex-shrink: 0;
+}

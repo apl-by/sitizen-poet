@@ -6,20 +6,27 @@ import InputForm from "./InputForm";
 import StrChoice from "./StrChoice";
 import StrSelected from "./StrSelected";
 
-function InputPage({ onChange, value, onSearchSubmit, history, currentArr, onRefresh, onAddDelete, isSelected }) {
+function InputPage({
+  onChange,
+  value,
+  onSearchSubmit,
+  history,
+  currentArr,
+  onRefresh,
+  onAddDelete,
+  onNewSearch,
+  onEdit,
+  isEdit,
+  isSelected,
+}) {
   // ------------Для вставки строк в разметку с тегами--------------------
 
   function createMarkup(strForRender) {
     return { __html: strForRender };
   }
 
-  function MyComponent(strForRender, boolean) {
-    return (
-      <p
-        dangerouslySetInnerHTML={createMarkup(strForRender)}
-        className={boolean ? "form-strokes__input" : "assembly__text"}
-      />
-    );
+  function MyComponent(strForRender, classNm) {
+    return <p dangerouslySetInnerHTML={createMarkup(strForRender)} className={classNm} />;
   }
 
   return (
@@ -41,11 +48,12 @@ function InputPage({ onChange, value, onSearchSubmit, history, currentArr, onRef
                   key={item.id}
                   onRefresh={onRefresh}
                   onAdd={onAddDelete}
-                  id={item.id}
-                  exist={item.exist}
-                  strUpperCaseTag={item.strUpperCaseTag}
+                  onNewSearch={onNewSearch}
+                  onEdit={onEdit}
+                  isEdit={isEdit}
+                  item={item}
                 >
-                  {MyComponent(item.strForRender, true)}
+                  {MyComponent(item.strForRender, "form-strokes__input")}
                 </StrChoice>
               );
             })}
@@ -56,7 +64,7 @@ function InputPage({ onChange, value, onSearchSubmit, history, currentArr, onRef
               currentArr.map((item) => {
                 return (
                   <StrSelected key={item.id} isSelected={isSelected[item.id]} onDelete={onAddDelete} id={item.id}>
-                    {MyComponent(item.strForRender, false)}
+                    {MyComponent(item.strForRender, "assembly__text")}
                   </StrSelected>
                 );
               })}
