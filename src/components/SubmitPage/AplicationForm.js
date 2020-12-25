@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Button from "../Buttons/Button";
 
 function ApplicationForm({ history, strsForRender }) {
   const [formData, setFormData] = useState({ recipient: "", fio: "", address: "", tel: "", date: "" });
-  console.log(formData);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     const cloneFormData = { ...formData };
@@ -19,7 +19,7 @@ function ApplicationForm({ history, strsForRender }) {
 
   let date = new Date();
   const currentDay = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-  console.log(date.getMonth());
+
   return (
     <form name="bioForm" className="form-bio" onSubmit={handleSubmit}>
       <div className="form-bio__data">

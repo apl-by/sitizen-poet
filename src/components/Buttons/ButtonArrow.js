@@ -1,5 +1,12 @@
-function ButtonArrow() {
-  return <button className="application__btn-back" type="button" aria-label="Назад" onClick={() => alert(`В разработке.\n Для возврата на главную страницу используйте ссылку в хедере`)}></button>;
+function ButtonArrow({ history }) {
+  return (
+    <button
+      className="application__btn-back"
+      type="button"
+      aria-label="Назад"
+      onClick={() => history.goBack()}
+    ></button>
+  );
 }
 
 export default ButtonArrow;

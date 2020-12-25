@@ -10,7 +10,7 @@ function TagPage({ history }) {
   return (
     <section className="application page__application">
       <div className="application__top">
-        <ButtonArrow />
+        <ButtonArrow history={history} />
         <p className="application__counter">1/3</p>
       </div>
 

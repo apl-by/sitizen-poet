@@ -33,7 +33,7 @@ function InputPage({
   return (
     <section className="application page__application">
       <div className="application__top">
-        <ButtonArrow />
+        <ButtonArrow history={history} />
         <p className="application__counter">2/3</p>
       </div>
       <h2 className="title application__title">Введите обращение</h2>
