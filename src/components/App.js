@@ -39,6 +39,7 @@ function App() {
     const newItem = getCurrentItem(requestObj[id]);
     cloneArr.splice(id, 1, newItem);
     setCurrentArr(cloneArr);
+    handleSelection(id, false);
   };
 
   // ----------Получение строк для отрисовки (всех сразу, при введении слов в основной input )------

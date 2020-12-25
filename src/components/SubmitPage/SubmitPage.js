@@ -5,7 +5,7 @@ function SubmitPage({ history, strsForRender }) {
   return (
     <section className="application page__application">
       <div className="application__top">
-        <ButtonArrow />
+        <ButtonArrow history={history} />
         <p className="application__counter">3/3</p>
       </div>
       <ApplicationForm history={history} strsForRender={strsForRender} />
