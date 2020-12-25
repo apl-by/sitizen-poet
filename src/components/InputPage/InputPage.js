@@ -18,6 +18,7 @@ function InputPage({
   onEdit,
   isEdit,
   isSelected,
+  strForSubmit,
 }) {
   // ------------Для вставки строк в разметку с тегами--------------------
 
@@ -71,7 +72,13 @@ function InputPage({
           </ul>
         </div>
       </div>
-      <Button type="button" name="Далее" element="application__control" onClick={() => history.push("/user-submit")} />
+      <Button
+        type="button"
+        name="Далее"
+        element="application__control"
+        onClick={() => history.push("/user-submit")}
+        disabled={Object.keys(strForSubmit).length ? false : true}
+      />
     </section>
   );
 }

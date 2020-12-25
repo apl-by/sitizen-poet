@@ -32,8 +32,6 @@ function App() {
   const [requestObj, setRequestObj] = useState({});
   const [wasSearch, setWasSearch] = useState(false);
   const [currentArr, setCurrentArr] = useState({});
-  console.log(requestObj);
-  console.log(currentArr);
 
   // ----- Обновление одной строки-----------
   const refreshString = (id) => {
@@ -120,6 +118,16 @@ function App() {
   // ---------------Добавление/удаление строк в правое окно
   const [isSelected, setIsSelected] = useState({});
   const [strForSubmit, setStrForSubmit] = useState({});
+  const [selectedArrForRender, setSelectedArrForRender] = useState([]);
+
+  useEffect(() => {
+    const newArr = [];
+    for (let key in strForSubmit) {
+      const newItem = strForSubmit[key];
+      newArr.push(newItem);
+    }
+    setSelectedArrForRender(newArr);
+  }, [strForSubmit]);
 
   const handleSelection = (id, boolean, upperCase) => {
     const selectedStr = { ...isSelected };
@@ -130,7 +138,7 @@ function App() {
     setIsSelected(selectedStr);
   };
 
-  // -----------
+  // -----------Поиск одного слова  при редактировании + изменение связанных данных
 
   const [isEdit, setIsEdit] = useState({});
 
@@ -218,6 +226,7 @@ function App() {
               onEdit={handleEdit}
               isEdit={isEdit}
               isSelected={isSelected}
+              strForSubmit={strForSubmit}
               value={currentInput}
               onSearchSubmit={handleSearch}
               history={history}
@@ -225,7 +234,7 @@ function App() {
             />
           </Route>
           <Route path="/user-submit">
-            <SubmitPage history={history} />
+            <SubmitPage history={history} strsForRender={selectedArrForRender} />
           </Route>
         </Switch>
       </Main>

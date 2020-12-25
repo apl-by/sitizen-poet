@@ -9,7 +9,7 @@ export function getCurrentItem(item) {
     const safetyStr = str.replace(/<|>/g, "'");
     const regexpTag = new RegExp(`${item.tag}`, "i");
     const strForRender = safetyStr.replace(regexpTag, `<span class="form-strokes__span">${item.tag}</span>`);
-    const strUpperCaseTag = safetyStr.replace(regexpTag, `${item.tag.toUpperCase()}`);
+    const strUpperCaseTag = safetyStr.replace(regexpTag, `[${item.tag.toUpperCase()}]`);
     const newItem = {
       id: item.id,
       strForRender: strForRender,
