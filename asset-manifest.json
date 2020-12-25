@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/sitizen-poet/static/css/main.3d57fc08.chunk.css",
-    "main.js": "/sitizen-poet/static/js/main.7334b6ce.chunk.js",
-    "main.js.map": "/sitizen-poet/static/js/main.7334b6ce.chunk.js.map",
+    "main.css": "/sitizen-poet/static/css/main.b751a4bc.chunk.css",
+    "main.js": "/sitizen-poet/static/js/main.547dc6f2.chunk.js",
+    "main.js.map": "/sitizen-poet/static/js/main.547dc6f2.chunk.js.map",
     "runtime-main.js": "/sitizen-poet/static/js/runtime-main.6b152000.js",
     "runtime-main.js.map": "/sitizen-poet/static/js/runtime-main.6b152000.js.map",
-    "static/js/2.712abe1a.chunk.js": "/sitizen-poet/static/js/2.712abe1a.chunk.js",
-    "static/js/2.712abe1a.chunk.js.map": "/sitizen-poet/static/js/2.712abe1a.chunk.js.map",
+    "static/js/2.5d9a2082.chunk.js": "/sitizen-poet/static/js/2.5d9a2082.chunk.js",
+    "static/js/2.5d9a2082.chunk.js.map": "/sitizen-poet/static/js/2.5d9a2082.chunk.js.map",
     "static/js/3.1bbeb9d5.chunk.js": "/sitizen-poet/static/js/3.1bbeb9d5.chunk.js",
     "static/js/3.1bbeb9d5.chunk.js.map": "/sitizen-poet/static/js/3.1bbeb9d5.chunk.js.map",
     "index.html": "/sitizen-poet/index.html",
-    "static/css/main.3d57fc08.chunk.css.map": "/sitizen-poet/static/css/main.3d57fc08.chunk.css.map",
-    "static/js/2.712abe1a.chunk.js.LICENSE.txt": "/sitizen-poet/static/js/2.712abe1a.chunk.js.LICENSE.txt",
+    "static/css/main.b751a4bc.chunk.css.map": "/sitizen-poet/static/css/main.b751a4bc.chunk.css.map",
+    "static/js/2.5d9a2082.chunk.js.LICENSE.txt": "/sitizen-poet/static/js/2.5d9a2082.chunk.js.LICENSE.txt",
     "static/media/index.css": "/sitizen-poet/static/media/rodchenkoctt.d1eb0f5a.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.6b152000.js",
-    "static/js/2.712abe1a.chunk.js",
-    "static/css/main.3d57fc08.chunk.css",
-    "static/js/main.7334b6ce.chunk.js"
+    "static/js/2.5d9a2082.chunk.js",
+    "static/css/main.b751a4bc.chunk.css",
+    "static/js/main.547dc6f2.chunk.js"
   ]
 }
