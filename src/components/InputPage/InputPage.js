@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import Button from "../Buttons/Button";
 import ButtonArrow from "../Buttons/ButtonArrow";
 import InputForm from "./InputForm";

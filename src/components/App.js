@@ -2,8 +2,8 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { api } from "../utils/api";
-import { getCurrentItem } from "../utils/utils";
-import { regexpInputValid, templateArr } from "../utils/constants";
+import { getCurrentItem, handleSearchRes } from "../utils/utils";
+import { regexpInputValid } from "../utils/constants";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
@@ -22,7 +22,6 @@ function App() {
   const [invalidValue, setInvalidValue] = useState("");
 
   const handleChangeInput = (e) => {
-    console.log(e.key);
     if (!regexpInputValid.test(e.target.value)) {
       setInvalidValue("используйте кириллицу, один пробел, не более 6 слов");
       return;
@@ -48,8 +47,8 @@ function App() {
   // ----------Получение строк для отрисовки (всех сразу, при введении слов в основной input )------
   useEffect(() => {
     if (!wasSearch) return;
-    const newArr = [];
 
+    const newArr = [];
     for (let key in requestObj) {
       const newItem = getCurrentItem(requestObj[key]);
       newArr.push(newItem);
@@ -84,25 +83,7 @@ function App() {
     Promise.all(promises)
       .then((res) => {
         const requestRes = res.reduce((prev, item, index) => {
-          if (item[0]) {
-            prev[index] = {
-              id: index,
-              exist: true,
-              tag: arrayInputTags[index],
-              arrayStrs: item,
-              arrLength: item.length,
-            };
-            return prev;
-          } else {
-            prev[index] = {
-              id: index,
-              exist: false,
-              tag: arrayInputTags[index],
-              arrayStrs: templateArr,
-              arrLength: templateArr.length,
-            };
-            return prev;
-          }
+          return handleSearchRes(prev, item, index, arrayInputTags[index]);
         }, {});
         setRequestObj(requestRes);
         setWasSearch(true);
@@ -161,26 +142,7 @@ function App() {
         const arrStrings = res.map((i) => {
           return i.fields.text[0];
         });
-
-        const newObj = {};
-
-        if (arrStrings[0]) {
-          newObj[id] = {
-            id: id,
-            exist: true,
-            tag: newTag,
-            arrayStrs: arrStrings,
-            arrLength: arrStrings.length,
-          };
-        } else {
-          newObj[id] = {
-            id: id,
-            exist: false,
-            tag: newTag,
-            arrayStrs: templateArr,
-            arrLength: templateArr.length,
-          };
-        }
+        const newObj = handleSearchRes({}, arrStrings, id, newTag);
 
         const cloneRequestObj = { ...requestObj };
         cloneRequestObj[id] = newObj[id];

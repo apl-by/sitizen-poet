@@ -1,3 +1,5 @@
+import { templateArr } from "./constants";
+
 function getRandomInd(length) {
   const random = Math.floor(Math.random() * length);
   return random;
@@ -24,4 +26,27 @@ export function getCurrentItem(item) {
     const newItem = { id: item.id, strForRender: strForRender, tag: item.tag, exist: false };
     return newItem;
   }
+}
+
+export function handleSearchRes(obj, arrStrs, index, tag) {
+  const newObj = obj;
+
+  if (arrStrs[0]) {
+    newObj[index] = {
+      id: index,
+      exist: true,
+      tag: tag,
+      arrayStrs: arrStrs,
+      arrLength: arrStrs.length,
+    };
+  } else {
+    newObj[index] = {
+      id: index,
+      exist: false,
+      tag: tag,
+      arrayStrs: templateArr,
+      arrLength: templateArr.length,
+    };
+  }
+  return newObj;
 }

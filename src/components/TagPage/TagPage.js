@@ -1,10 +1,23 @@
+import { problemTags, typeProblems } from "../../utils/constants";
+
 import ButtonArrow from "../Buttons/ButtonArrow";
 import Button from "../Buttons/Button";
+import TagItem from "./TagItem";
+import { useEffect, useState } from "react";
 
 function TagPage({ history }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push("/user-input");
+  };
+
+  const [selectedProblem, setSelectedProblem] = useState({ problem: "", type: "" });
+  console.log(selectedProblem);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    const clone = { ...selectedProblem };
+    name === "problem" ? (clone["problem"] = value) : (clone["type"] = value);
+    setSelectedProblem(clone);
   };
 
   return (
@@ -18,50 +31,22 @@ function TagPage({ history }) {
         <fieldset className="fieldset form-survey__fieldset">
           <h2 className="title application__title">Какого рода проблема?</h2>
           <div className="form-survey__list">
-            <label className="form-survey__item">
-              <input name="problem" type="radio" value="Коммунальная" className="form-survey__radio" />
-              <span className="form-survey__custom">Коммунальная</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="problem" type="radio" value="Экономическая" className="form-survey__radio" />
-              <span className="form-survey__custom">Экономическая</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="problem" type="radio" value="Социальная" className="form-survey__radio" />
-              <span className="form-survey__custom">Социальная</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="problem" type="radio" value="Урбанистическая" className="form-survey__radio" />
-              <span className="form-survey__custom">Урбанистическая</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="problem" type="radio" value="Политическая" className="form-survey__radio" />
-              <span className="form-survey__custom">Политическая</span>
-            </label>
+            {problemTags.map((item, index) => {
+              return <TagItem problemTag={item} onChange={handleChange} name="problem" key={index} />;
+            })}
           </div>
         </fieldset>
-        <fieldset className="fieldset form-survey__fieldset">
-          <h3 className="title title_size_medium">Что не так?</h3>
-          <div className="form-survey__list">
-            <label className="form-survey__item">
-              <input name="subject" type="radio" value="Электричество" className="form-survey__radio" />
-              <span className="form-survey__custom">Электричество</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="subject" type="radio" value="Водопровод" className="form-survey__radio" />
-              <span className="form-survey__custom">Водопровод</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="subject" type="radio" value="Соседи" className="form-survey__radio" />
-              <span className="form-survey__custom">Соседи</span>
-            </label>
-            <label className="form-survey__item">
-              <input name="subject" type="radio" value="Платежи" className="form-survey__radio" />
-              <span className="form-survey__custom">Платежи</span>
-            </label>
-          </div>
-        </fieldset>
-        <Button type="submit" name="Далее" element="application__control" />
+        {selectedProblem["problem"] && (
+          <fieldset className="fieldset form-survey__fieldset">
+            <h3 className="title title_size_medium">Что не так?</h3>
+            <div className="form-survey__list">
+              {typeProblems[selectedProblem["problem"]].map((item, index) => {
+                return <TagItem problemTag={item} onChange={handleChange} name="subject" key={index} />;
+              })}
+            </div>
+          </fieldset>
+        )}
+        <Button type="submit" name="Далее" element="application__control" disabled={!selectedProblem["type"]} />
       </form>
     </section>
   );
