@@ -19,12 +19,15 @@ function App() {
 
   const [currentInput, setCurrentInput] = useState("");
   const [submitedInput, setSubmitedInput] = useState("");
+  const [invalidValue, setInvalidValue] = useState("");
 
   const handleChangeInput = (e) => {
+    console.log(e.key);
     if (!regexpInputValid.test(e.target.value)) {
-      alert("Допускается:\n-ввод кириллицы;\n-слова разделяются одним пробелом;\n-не более 6 слов.");
+      setInvalidValue("используйте кириллицу, один пробел, не более 6 слов");
       return;
     }
+    setInvalidValue("");
     setCurrentInput(e.target.value);
   };
 
@@ -48,10 +51,8 @@ function App() {
     const newArr = [];
 
     for (let key in requestObj) {
-      if (key !== "tagsArr") {
-        const newItem = getCurrentItem(requestObj[key]);
-        newArr.push(newItem);
-      }
+      const newItem = getCurrentItem(requestObj[key]);
+      newArr.push(newItem);
     }
     setCurrentArr(newArr);
     setWasSearch(false);
@@ -82,30 +83,27 @@ function App() {
 
     Promise.all(promises)
       .then((res) => {
-        const requestRes = res.reduce(
-          (prev, item, index) => {
-            if (item[0]) {
-              prev[index] = {
-                id: index,
-                exist: true,
-                tag: arrayInputTags[index],
-                arrayStrs: item,
-                arrLength: item.length,
-              };
-              return prev;
-            } else {
-              prev[index] = {
-                id: index,
-                exist: false,
-                tag: arrayInputTags[index],
-                arrayStrs: templateArr,
-                arrLength: templateArr.length,
-              };
-              return prev;
-            }
-          },
-          { tagsArr: arrayInputTags }
-        );
+        const requestRes = res.reduce((prev, item, index) => {
+          if (item[0]) {
+            prev[index] = {
+              id: index,
+              exist: true,
+              tag: arrayInputTags[index],
+              arrayStrs: item,
+              arrLength: item.length,
+            };
+            return prev;
+          } else {
+            prev[index] = {
+              id: index,
+              exist: false,
+              tag: arrayInputTags[index],
+              arrayStrs: templateArr,
+              arrLength: templateArr.length,
+            };
+            return prev;
+          }
+        }, {});
         setRequestObj(requestRes);
         setWasSearch(true);
       })
@@ -163,6 +161,7 @@ function App() {
         const arrStrings = res.map((i) => {
           return i.fields.text[0];
         });
+
         const newObj = {};
 
         if (arrStrings[0]) {
@@ -232,6 +231,7 @@ function App() {
               onSearchSubmit={handleSearch}
               history={history}
               currentArr={currentArr}
+              invalidInput={invalidValue}
             />
           </Route>
           <Route path="/user-submit">

@@ -49,7 +49,9 @@
 @import url(./blocks/form-survey/__fieldset/form-survey__fieldset.css);
 
 @import url(./blocks/form-findwords/form-findwords.css);
+@import url(./blocks/form-findwords/__label/form-findwords__label.css);
 @import url(./blocks/form-findwords/__input/form-findwords__input.css);
+@import url(./blocks/form-findwords/__valid/form-findwords__valid.css);
 @import url(./blocks/form-findwords/__btn/form-findwords__btn.css);
 
 @import url(./blocks/form-strokes/form-strokes.css);
