@@ -18,8 +18,8 @@ function ApplicationForm({ history, strsForRender }) {
   };
 
   let date = new Date();
-  const currentDay = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
-
+  const currentDay = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  console.log(date.getMonth());
   return (
     <form name="bioForm" className="form-bio" onSubmit={handleSubmit}>
       <div className="form-bio__data">
