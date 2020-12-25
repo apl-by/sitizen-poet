@@ -1,6 +1,6 @@
 import Button from "../Buttons/Button";
 
-function InputForm({ onChange, value, onSearchSubmit }) {
+function InputForm({ onChange, value, onSearchSubmit, invalidInput }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearchSubmit();
@@ -8,14 +8,17 @@ function InputForm({ onChange, value, onSearchSubmit }) {
 
   return (
     <form name="userWordsForm" className="form-findwords" onSubmit={handleSubmit}>
-      <input
-        name="input"
-        type="text"
-        className="form-findwords__input"
-        value={value}
-        onChange={onChange}
-        autoFocus={true}
-      />
+      <label className="form-findwords__label">
+        <input
+          name="input"
+          type="text"
+          className="form-findwords__input"
+          value={value}
+          onChange={onChange}
+          autoFocus={true}
+        />
+        <span className="form-findwords__valid">{invalidInput}</span>
+      </label>
       <Button type="submit" name="Найти строки" element="form-findwords__btn" />
     </form>
   );

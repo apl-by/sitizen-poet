@@ -1,0 +1,7 @@
+.form-findwords__valid {
+  position: absolute;
+  bottom: 1px;
+  left: 24px;
+  font-size: 22px;
+  color: red;
+}

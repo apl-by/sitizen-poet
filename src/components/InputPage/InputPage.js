@@ -19,6 +19,7 @@ function InputPage({
   isEdit,
   isSelected,
   strForSubmit,
+  invalidInput,
 }) {
   // ------------Для вставки строк в разметку с тегами--------------------
 
@@ -38,7 +39,7 @@ function InputPage({
       </div>
       <h2 className="title application__title">Введите обращение</h2>
       <p className="application__subtitle">Не больше 6 слов</p>
-      <InputForm onChange={onChange} value={value} onSearchSubmit={onSearchSubmit} />
+      <InputForm onChange={onChange} value={value} onSearchSubmit={onSearchSubmit} invalidInput={invalidInput} />
 
       <div className="form-strokes form-strokes__columns">
         <ul className="form-strokes__list">
