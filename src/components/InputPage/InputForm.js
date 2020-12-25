@@ -8,7 +8,14 @@ function InputForm({ onChange, value, onSearchSubmit }) {
 
   return (
     <form name="userWordsForm" className="form-findwords" onSubmit={handleSubmit}>
-      <input name="input" type="text" className="form-findwords__input" value={value} onChange={onChange} />
+      <input
+        name="input"
+        type="text"
+        className="form-findwords__input"
+        value={value}
+        onChange={onChange}
+        autoFocus={true}
+      />
       <Button type="submit" name="Найти строки" element="form-findwords__btn" />
     </form>
   );
