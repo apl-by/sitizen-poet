@@ -1,0 +1,17 @@
+.overview__btn {
+  width: 160px;
+  height: 48px;
+  margin: 18px 0;
+  padding: 0;
+  transition: opacity 0.1s ease-out;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.overview__btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

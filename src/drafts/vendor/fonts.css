@@ -4,7 +4,8 @@
   font-style: normal;
 
   src: url("../vendor/fonts/rodchenkoctt.woff2") format("woff2"),
-    url("../vendor/fonts/rodchenkoctt.woff") format("woff"), url("../vendor/fonts/rodchenkoctt.ttf") format("truetype"),
+    url("../vendor/fonts/rodchenkoctt.woff") format("woff"),
+    url("../vendor/fonts/rodchenkoctt.ttf") format("truetype"),
     url("../vendor/fonts/rodchenkoctt.eot") format("eot");
 }
 
@@ -36,7 +37,8 @@
   font-style: normal;
 
   src: url("../vendor/fonts/TTLakes-Bold.woff2") format("woff2"),
-    url("../vendor/fonts/TTLakes-Bold.woff") format("woff"), url("../vendor/fonts/TTLakes-Bold.ttf") format("truetype"),
+    url("../vendor/fonts/TTLakes-Bold.woff") format("woff"),
+    url("../vendor/fonts/TTLakes-Bold.ttf") format("truetype"),
     url("../vendor/fonts/TTLakes-Bold.eot") format("eot");
 }
 

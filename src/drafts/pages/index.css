@@ -13,6 +13,7 @@
 @import url(../blocks/title/_size/title_size_medium.css);
 @import url(../blocks/fieldset/fieldset.css);
 @import url(../blocks/btn/btn.css);
+@import url(../blocks/btn/_disabled/btn_disabled.css);
 @import url(../blocks/btn/_size/btn_size_m.css);
 @import url(../blocks/btn/_type/btn_type_light.css);
 @import url(../blocks/btn/_type/btn_type_square.css);
@@ -143,6 +144,34 @@
 @import url(../blocks/card-done/__image/card-done__image.css);
 @import url(../blocks/card-done/__body/card-done__body.css);
 @import url(../blocks/card-done/__text/card-done__text.css);
+
+@import url(../blocks/problem-tags/problem-tags.css);
+@import url(../blocks/problem-tags/__list/problem-tags__list.css);
+
+@import url(../blocks/taglist/taglist.css);
+@import url(../blocks/taglist/__item/taglist__item.css);
+
+@import url(../blocks/overview/overview.css);
+@import url(../blocks/overview/__initiative/overview__initiative.css);
+@import url(../blocks/overview/__text/overview__text.css);
+@import url(../blocks/overview/__title/overview__title.css);
+@import url(../blocks/overview/__initiative-text/overview__initiative-text.css);
+@import url(../blocks/overview/__actions/overview__actions.css);
+@import url(../blocks/overview/__btn/overview__btn.css);
+@import url(../blocks/overview/__socials-title/overview__socials-title.css);
+
+@import url(../blocks/socials/socials.css);
+@import url(../blocks/socials/__item/socials__item.css);
+@import url(../blocks/socials/__icon/socials__icon.css);
+@import url(../blocks/socials/__btn-expand/socials__btn-expand.css);
+
+@import url(../blocks/comment-section/comment-section.css);
+@import url(../blocks/comment-section/__form/comment-section__form.css);
+
+@import url(../blocks/form-comment/form-comment.css);
+@import url(../blocks/form-comment/__input-area/form-comment__input-area.css);
+@import url(../blocks/form-comment/__input/form-comment__input.css);
+@import url(../blocks/form-comment/__btn/form-comment__btn.css);
 
 .span * {
   color: aliceblue;

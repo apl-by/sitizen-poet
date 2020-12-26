@@ -10,11 +10,11 @@
   font-weight: 700;
 }
 
-.btn:hover {
+.btn:hover:enabled {
   opacity: 0.7;
 }
 
-.btn:active {
+.btn:active:enabled {
   color: #fff;
   background-color: #d00000;
 }
