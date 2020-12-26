@@ -1,0 +1,7 @@
+.overview__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 0 auto;
+}
