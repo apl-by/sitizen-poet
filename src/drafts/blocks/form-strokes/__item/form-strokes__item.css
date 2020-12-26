@@ -1,0 +1,11 @@
+.form-strokes__item {
+  display: flex;
+  align-items: center;
+  width: 540px;
+  height: 65px;
+  margin-top: 16px;
+}
+
+.form-strokes__item:first-of-type {
+  margin-top: 0;
+}

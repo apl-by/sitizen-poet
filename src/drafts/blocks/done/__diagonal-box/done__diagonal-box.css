@@ -1,0 +1,9 @@
+.done__diagonal-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 400px;
+  transform: skewY(15deg) translateY(57%);
+  background-color: #d00000;
+}

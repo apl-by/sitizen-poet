@@ -1,0 +1,20 @@
+.btn {
+  width: 351px;
+  height: 82px;
+  padding: 0;
+  transition: opacity 0.1s ease-out;
+  color: #fff;
+  border: 0;
+  background-color: #262524;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn:active {
+  color: #fff;
+  background-color: #d00000;
+}

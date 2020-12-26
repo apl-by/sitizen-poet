@@ -1,0 +1,4 @@
+.form-strokes__btn-refresh {
+  background-image: url(../../../images/btn-refresh.svg);
+  flex-shrink: 0;
+}

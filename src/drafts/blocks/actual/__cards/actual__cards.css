@@ -1,0 +1,11 @@
+.actual__cards {
+  z-index: 1;
+  display: grid;
+  margin: 38px 0 0;
+  padding-left: 0;
+  list-style: none;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 325px;
+  grid-gap: 42px 30px;
+}

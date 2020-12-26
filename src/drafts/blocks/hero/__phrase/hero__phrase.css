@@ -1,0 +1,14 @@
+.hero__phrase {
+  position: absolute;
+  right: 13.75%;
+  bottom: 110px;
+  left: 0;
+  width: 45%;
+  height: 195px;
+  margin-left: auto;
+  transform: skewY(15deg) rotate(-15deg);
+  background-image: url(../../../images/hero-phrase.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

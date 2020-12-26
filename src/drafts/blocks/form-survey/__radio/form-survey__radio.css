@@ -1,0 +1,12 @@
+.form-survey__radio {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.form-survey__radio:checked + .form-survey__custom {
+  color: #fff;
+  background-color: #d00000;
+}

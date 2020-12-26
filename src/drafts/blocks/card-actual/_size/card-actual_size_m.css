@@ -1,0 +1,5 @@
+.card-actual_size_m {
+  max-width: 540px;
+
+  grid-column: span 2;
+}
