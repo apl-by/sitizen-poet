@@ -1,0 +1,8 @@
+.how-it-works__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px;
+  padding-left: 0;
+  list-style: none;
+}

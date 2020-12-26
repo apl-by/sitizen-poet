@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "RodchenkoCTT";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("../vendor/fonts/rodchenkoctt.woff2") format("woff2"),
+    url("../vendor/fonts/rodchenkoctt.woff") format("woff"), url("../vendor/fonts/rodchenkoctt.ttf") format("truetype"),
+    url("../vendor/fonts/rodchenkoctt.eot") format("eot");
+}
+
+@font-face {
+  font-family: "TTLakes";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("../vendor/fonts/TTLakes-Regular.woff2") format("woff2"),
+    url("../vendor/fonts/TTLakes-Regular.woff") format("woff"),
+    url("../vendor/fonts/TTLakes-Regular.ttf") format("truetype"),
+    url("../vendor/fonts/TTLakes-Regular.eot") format("eot");
+}
+
+@font-face {
+  font-family: "TTLakes";
+  font-weight: normal;
+  font-style: italic;
+
+  src: url("../vendor/fonts/TTLakes-Italic.woff2") format("woff2"),
+    url("../vendor/fonts/TTLakes-Italic.woff") format("woff"),
+    url("../vendor/fonts/TTLakes-Italic.ttf") format("truetype"),
+    url("../vendor/fonts/TTLakes-Italic.eot") format("eot");
+}
+
+@font-face {
+  font-family: "TTLakes";
+  font-weight: bold;
+  font-style: normal;
+
+  src: url("../vendor/fonts/TTLakes-Bold.woff2") format("woff2"),
+    url("../vendor/fonts/TTLakes-Bold.woff") format("woff"), url("../vendor/fonts/TTLakes-Bold.ttf") format("truetype"),
+    url("../vendor/fonts/TTLakes-Bold.eot") format("eot");
+}
+
+@font-face {
+  font-family: "PTSerif";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("../vendor/fonts/pt-serif-regular.woff2") format("woff2"),
+    url("../vendor/fonts/pt-serif-regular.woff") format("woff"),
+    url("../vendor/fonts/pt-serif-regular.ttf") format("truetype"),
+    url("../vendor/fonts/pt-serif-regular.eot") format("eot");
+}

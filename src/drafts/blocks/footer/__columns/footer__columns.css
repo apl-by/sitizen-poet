@@ -1,0 +1,6 @@
+.footer__columns {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  max-width: 1110px;
+  margin: 0 auto;
+}

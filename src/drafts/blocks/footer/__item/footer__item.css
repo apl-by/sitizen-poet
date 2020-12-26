@@ -1,0 +1,7 @@
+.footer__item {
+  margin-top: 16px;
+}
+
+.footer__item:first-of-type {
+  margin-top: 0;
+}

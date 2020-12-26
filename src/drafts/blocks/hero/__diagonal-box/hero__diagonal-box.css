@@ -1,0 +1,9 @@
+.hero__diagonal-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 1148px;
+  transform: skewY(-15deg) translateY(-50%);
+  background-color: #262524;
+}
