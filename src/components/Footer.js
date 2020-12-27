@@ -10,6 +10,11 @@ function Footer() {
     setYear(`2020-${currentYear}`);
   }
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    alert("🤷‍♂️🤷‍♀️");
+  };
+
   return (
     <footer className="footer">
       <div className="footer__columns">
@@ -22,12 +27,12 @@ function Footer() {
         <nav className="footer__column footer__column_content_info">
           <ul className="footer__column-links">
             <li className="footer__item">
-              <a href="/" className="link footer__link">
+              <a href="/" className="link footer__link" onClick={handleClick}>
                 О проекте
               </a>
             </li>
             <li className="footer__item">
-              <a href="/" className="link footer__link">
+              <a href="/" className="link footer__link" onClick={handleClick}>
                 Пресса
               </a>
             </li>
@@ -36,12 +41,12 @@ function Footer() {
         <nav className="footer__column footer__column_content_contacts">
           <ul className="footer__column-links">
             <li className="footer__item">
-              <a href="/" className="link footer__link">
+              <a href="/" className="link footer__link" onClick={handleClick}>
                 Контакты
               </a>
             </li>
             <li className="footer__item">
-              <a href="/" className="link footer__link">
+              <a href="/" className="link footer__link" onClick={handleClick}>
                 Сотрудничество
               </a>
             </li>
