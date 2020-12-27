@@ -1,6 +1,19 @@
 .actual__title {
   z-index: 1;
-  align-self: flex-end;
+  display: grid;
+  width: 100%;
+  text-align: right;
   text-transform: uppercase;
   color: #fff;
+
+  grid-template-columns: minmax(20px, 1fr) auto;
+  grid-gap: 62px;
+}
+
+.actual__title::before {
+  position: relative;
+  margin-left: -9999px;
+  content: "";
+  transform: translateY(-8px);
+  border-bottom: 10px solid #d00000;
 }
