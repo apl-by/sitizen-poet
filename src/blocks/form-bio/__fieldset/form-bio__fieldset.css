@@ -1,4 +1,5 @@
 .form-bio__fieldset {
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
 }
