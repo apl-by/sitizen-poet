@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [year, setYear] = useState(2020);
@@ -13,9 +14,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer__columns">
         <div className="footer__column footer__column_content_copyright">
-          <a className="link logo logo_place_footer" href="#">
+          <Link className="link logo logo_place_footer" to="/">
             Гражданин поэт
-          </a>
+          </Link>
           <p className="footer__author">&copy; {year} / Team39</p>
         </div>
         <nav className="footer__column footer__column_content_info">

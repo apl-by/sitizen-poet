@@ -1,5 +1,7 @@
 .application__top {
+  z-index: 1;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 14px;
 }
