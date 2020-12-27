@@ -1,0 +1,4 @@
+.footer__column_content_info {
+  flex-grow: 1;
+  max-width: 380px;
+}

@@ -10,8 +10,43 @@ function Footer() {
   }
 
   return (
-    <footer className="footer page__footer">
-      <p className="footer__copyright">&copy; {year}. Group 39</p>
+    <footer className="footer">
+      <div className="footer__columns">
+        <div className="footer__column footer__column_content_copyright">
+          <a className="link logo logo_place_footer" href="#">
+            Гражданин поэт
+          </a>
+          <p className="footer__author">&copy; {year} / Team39</p>
+        </div>
+        <nav className="footer__column footer__column_content_info">
+          <ul className="footer__column-links">
+            <li className="footer__item">
+              <a href="/" className="link footer__link">
+                О проекте
+              </a>
+            </li>
+            <li className="footer__item">
+              <a href="/" className="link footer__link">
+                Пресса
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav className="footer__column footer__column_content_contacts">
+          <ul className="footer__column-links">
+            <li className="footer__item">
+              <a href="/" className="link footer__link">
+                Контакты
+              </a>
+            </li>
+            <li className="footer__item">
+              <a href="/" className="link footer__link">
+                Сотрудничество
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   );
 }

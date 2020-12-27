@@ -1,0 +1,9 @@
+.card-step__number {
+  position: absolute;
+  right: 25px;
+  bottom: -22px;
+  color: #d00000;
+  font-family: "RodchenkoCTT";
+  font-size: 64px;
+  line-height: 1;
+}
