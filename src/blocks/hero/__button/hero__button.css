@@ -1,4 +1,5 @@
 .hero__button {
+  z-index: 99;
   align-self: flex-end;
-  margin-top: 300px;
+  margin: 513px 0 148px;
 }

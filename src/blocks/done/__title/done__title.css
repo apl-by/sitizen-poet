@@ -1,3 +1,6 @@
 .done__title {
+  z-index: 1;
   align-self: flex-end;
+  text-transform: uppercase;
+  color: #d00000;
 }

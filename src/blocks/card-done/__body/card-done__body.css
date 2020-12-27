@@ -1,0 +1,8 @@
+.card-done__body {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 84px;
+  padding: 18px;
+  background-color: #373534;
+}

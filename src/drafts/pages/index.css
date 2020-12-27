@@ -9,14 +9,18 @@
 @import url(../blocks/page/__application/page__application.css);
 
 @import url(../blocks/link/link.css);
+
 @import url(../blocks/title/title.css);
 @import url(../blocks/title/_size/title_size_medium.css);
+
 @import url(../blocks/fieldset/fieldset.css);
+
 @import url(../blocks/btn/btn.css);
 @import url(../blocks/btn/_disabled/btn_disabled.css);
 @import url(../blocks/btn/_size/btn_size_m.css);
 @import url(../blocks/btn/_type/btn_type_light.css);
 @import url(../blocks/btn/_type/btn_type_square.css);
+
 @import url(../blocks/logo/logo.css);
 @import url(../blocks/logo/_place/logo_place_header.css);
 @import url(../blocks/logo/_place/logo_place_footer.css);

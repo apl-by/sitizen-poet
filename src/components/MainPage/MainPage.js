@@ -1,54 +1,75 @@
-import imgS from "../../images/s.png";
-import imgM from "../../images/m.png";
-import imgL from "../../images/l.png";
-import imgXL from "../../images/xl.png";
+import mayak from "../../images/hero-mayak.png";
+import { tutorialCards, actualCards, doneCards } from "../../utils/constants";
+
 import Button from "../Buttons/Button";
-import Card from "./Card";
+import DoneCard from "./DoneCard";
+import ActualCard from "./ActualCard";
+import TutorialCard from "./TutorialCard";
 
 function MainPage({ history }) {
   return (
     <>
-      <section className="hero page__hero">
-        <h1 className="title hero__title">Сайт гражданских инициатив</h1>
-        <Button
-          type="button"
-          name="Создать инициативу"
-          element="hero__button"
-          onClick={() => history.push("/tags-selection")}
-        />
+      <section className="hero">
+        <div className="hero__content">
+          <h1 className="title hero__title">Сайт гражданских инициатив</h1>
+          <Button
+            type="button"
+            name="Создать инициативу"
+            element="hero__button"
+            onClick={() => history.push("/tags-selection")}
+          />
+        </div>
+        <div className="hero__diagonal-box">
+          <div className="hero__phrase"></div>
+        </div>
+        <img src={mayak} alt="Маяковский с вытянутой рукой" className="hero__mayak" />
       </section>
-      <section className="how-it-works page__how-it-works">
-        <h2 className="title how-it-works__title">Как это работает</h2>
-        <div className="how-it-works__content"></div>
+
+      <section className="how-it-works">
+        <div className="how-it-works__content">
+          <h2 className="title how-it-works__title">Как это работает</h2>
+          <ul className="how-it-works__cards">
+            {tutorialCards.map((item, index) => {
+              return <TutorialCard item={item} key={index} />;
+            })}
+          </ul>
+        </div>
       </section>
-      <section className="actual page__actual">
-        <h2 className="title actual__title">Актуальные инициативы</h2>
-        <ul className="actual__cards">
-          <Card modifier="card_size_m" size={imgM} />
-          <Card modifier="card_size_m" size={imgM} />
-          <Card modifier="card_size_m" size={imgM} />
-          <Card modifier="card_size_s" size={imgS} />
-          <Card modifier="card_size_s" size={imgS} />
-        </ul>
-        <Button
-          type="button"
-          element="actual__btn"
-          name="Смотреть ещё"
-          onClick={() => alert("Страница с актуальными инициативами")}
-        />
+
+      <section className="actual">
+        <div className="actual__diagonal-box"></div>
+        <div className="actual__content">
+          <h2 className="title actual__title">Актуальные инициативы</h2>
+          <ul className="actual__cards">
+            {actualCards.map((item, index) => {
+              return <ActualCard item={item} key={index} />;
+            })}
+          </ul>
+          <Button
+            type="button"
+            element="actual__btn"
+            name="Смотреть ещё"
+            onClick={() => alert("Страница с актуальными инициативами")}
+          />
+        </div>
       </section>
-      <section className="done page__done">
-        <h2 className="title done__title">Уже приняты</h2>
-        <ul className="done__cards">
-          <Card modifier="card_size_xl" size={imgXL} />
-          <Card modifier="card_size_l" size={imgL} />
-        </ul>
-        <Button
-          type="button"
-          element="done__btn"
-          name="Смотреть ещё"
-          onClick={() => alert("Страница с принятыми инициативами")}
-        />
+
+      <section className="done">
+        <div className="done__diagonal-box"></div>
+        <div className="done__content">
+          <h2 className="title done__title">Уже приняты</h2>
+          <ul className="done__cards">
+            {doneCards.map((item, index) => {
+              return <DoneCard item={item} key={index} />;
+            })}
+          </ul>
+          <Button
+            type="button"
+            element="done__btn"
+            name="Смотреть ещё"
+            onClick={() => alert("Страница с принятыми инициативами")}
+          />
+        </div>
       </section>
     </>
   );
