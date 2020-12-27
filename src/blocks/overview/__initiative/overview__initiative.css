@@ -1,0 +1,6 @@
+.overview__initiative {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 0 auto;
+}
