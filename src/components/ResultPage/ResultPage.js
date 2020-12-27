@@ -4,30 +4,31 @@ import iconOk from "../../images/icon-ok.svg";
 import iconVk from "../../images/icon-vk.svg";
 import overviewPlace from "../../images/overview-place.jpg";
 
-function ResultPage() {
+function ResultPage({ selectedProblem, initiatives }) {
   return (
     <>
       <section className="problem-tags">
         <ul className="problem-tags__list taglist">
-          <li className="taglist__item">Коммунальная проблема</li>
-          <li className="taglist__item">Электричество</li>
+          <li className="taglist__item">{selectedProblem.problem}</li>
+          {selectedProblem.type !== "Другое" && <li className="taglist__item">{selectedProblem.type}</li>}
         </ul>
       </section>
       <section className="overview">
         <div className="overview__initiative">
           <div className="overview__text">
-            <h3 className="title overview__title">Инициатива №0000 успешно создана!</h3>
-            <p className="overview__initiative-text">
-              Блажен, кто под крылом своих домашних лар
-              <br />у подъезда, на скамейке
-              <br />
-              Людмила светлый взор возводит,
-            </p>
+            <h3 className="title overview__title">{`Инициатива №${initiatives.i} успешно создана!`}</h3>
+            {initiatives[initiatives["i"]].strings.map((item, index) => {
+              return (
+                <p className="overview__initiative-text" key={index}>
+                  {item}
+                </p>
+              );
+            })}
           </div>
           <img src={overviewPlace} alt="Изображение проблемы" className="overview__image" />
         </div>
         <div className="overview__actions">
-          <button className="overview__btn" type="button">
+          <button className="overview__btn" type="button" disabled={true}>
             Развернуть
           </button>
           <p className="overview__socials-title">Поделиться:</p>

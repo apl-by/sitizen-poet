@@ -6,18 +6,18 @@ import DoneCard from "./DoneCard";
 import ActualCard from "./ActualCard";
 import TutorialCard from "./TutorialCard";
 
-function MainPage({ history }) {
+function MainPage({ history, reset }) {
+  const handlerReset = () => {
+    reset();
+    history.push("/tags-selection");
+  };
+
   return (
     <>
       <section className="hero">
         <div className="hero__content">
           <h1 className="title hero__title">Сайт гражданских инициатив</h1>
-          <Button
-            type="button"
-            name="Создать инициативу"
-            element="hero__button"
-            onClick={() => history.push("/tags-selection")}
-          />
+          <Button type="button" name="Создать инициативу" element="hero__button" onClick={handlerReset} />
         </div>
         <div className="hero__diagonal-box">
           <div className="hero__phrase"></div>

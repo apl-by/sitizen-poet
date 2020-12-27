@@ -20,5 +20,6 @@
 }
 
 .btn:disabled {
-  opacity: 0.5;
+  color: #fff;
+  background-color: #e5e5e5;
 }
