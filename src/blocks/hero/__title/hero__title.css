@@ -1,8 +1,10 @@
 .hero__title {
+  z-index: 1;
   max-width: 650px;
-  margin: 48px 0 0;
+  margin: 66px 0 0;
+  text-transform: uppercase;
   color: white;
-  font-size: 96px;
-  font-weight: 700;
-  line-height: 0.9;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.05;
 }

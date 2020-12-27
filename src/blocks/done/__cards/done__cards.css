@@ -1,7 +1,9 @@
 .done__cards {
+  z-index: 1;
   display: grid;
-  margin: 48px 0 0;
+  margin: 38px 0 0;
   padding-left: 0;
+  list-style: none;
 
   grid-template-columns: 730px 350px;
   grid-template-rows: auto;

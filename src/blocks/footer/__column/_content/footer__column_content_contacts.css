@@ -1,0 +1,4 @@
+.footer__column_content_contacts {
+  /* нужно сделать, чтобы он занимал только оставшееся пространство */
+  flex-basis: auto;
+}

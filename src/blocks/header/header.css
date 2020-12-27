@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  /* max-width: 1110px; */
-  background-color: #555;
+  justify-content: center;
   width: 100%;
+  background-color: #d00000;
+  min-height: 98px;
 }

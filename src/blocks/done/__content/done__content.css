@@ -1,0 +1,6 @@
+.done__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  margin: 60px auto 64px;
+}
