@@ -1,7 +1,15 @@
-.card-done__iamge {
+.card-done__image {
   width: 100%;
   height: 354px;
+  transition: filter 0.5s ease-in-out;
   object-fit: cover;
 
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   object-position: center;
+}
+
+.card-done__image:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
