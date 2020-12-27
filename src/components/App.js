@@ -30,6 +30,17 @@ function App() {
     setCurrentInput(e.target.value);
   };
 
+  // ------Выбор тегов-----------
+  const [selectedProblem, setSelectedProblem] = useState({ problem: "", type: "" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    const clone = { ...selectedProblem };
+    clone["type"] = "";
+    name === "problem" ? (clone["problem"] = value) : (clone["type"] = value);
+    setSelectedProblem(clone);
+  };
+
   //-------- Запрос  на сервер за стихами---------------------------
   const [requestObj, setRequestObj] = useState({});
   const [wasSearch, setWasSearch] = useState(false);
@@ -177,7 +188,7 @@ function App() {
             <MainPage history={history} />
           </Route>
           <Route path="/tags-selection">
-            <TagPage history={history} />
+            <TagPage history={history} onChange={handleChange} selectedTag={selectedProblem} />
           </Route>
           <Route path="/user-input">
             <InputPage

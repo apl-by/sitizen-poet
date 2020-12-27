@@ -113,7 +113,7 @@
 @import url(./blocks/done/__cards/done__cards.css);
 @import url(./blocks/done/__btn/done__btn.css);
 
-.span * {
+/* .span * {
   font-size: 30px;
   color: aliceblue;
-}
+} */
