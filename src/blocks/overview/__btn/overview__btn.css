@@ -15,3 +15,8 @@
   cursor: pointer;
   opacity: 0.7;
 }
+
+.overview__btn:disabled {
+  color: #fff;
+  background-color: #e5e5e5;
+}

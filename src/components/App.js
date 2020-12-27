@@ -180,13 +180,39 @@ function App() {
     setSubmitedInput(input);
   };
 
+  // ------Получение данных инициативы---------
+
+  const [initiatives, setInitiatives] = useState({ i: 0 });
+
+  const handlerSubmitApp = (item) => {
+    const clone = { ...initiatives };
+    clone[clone["i"] + 1] = item;
+    clone.i += 1;
+    setInitiatives(clone);
+  };
+
+  // --------------------Сброс данных------------
+
+  const handlerReset = () => {
+    setCurrentInput("");
+    setSubmitedInput("");
+    setInvalidValue("");
+    setSelectedProblem({ problem: "", type: "" });
+    setRequestObj({});
+    setCurrentArr({});
+    setIsSelected({});
+    setStrForSubmit({});
+    setSelectedArrForRender([]);
+    setIsEdit({});
+  };
+
   return (
     <div className="page">
       <Header />
       <Main>
         <Switch>
           <Route exact path="/">
-            <MainPage history={history} />
+            <MainPage history={history} reset={handlerReset} />
           </Route>
           <Route path="/tags-selection">
             <TagPage history={history} onChange={handleChange} selectedTag={selectedProblem} />
@@ -209,10 +235,10 @@ function App() {
             />
           </Route>
           <Route path="/user-submit">
-            <SubmitPage history={history} strsForRender={selectedArrForRender} />
+            <SubmitPage history={history} strsForRender={selectedArrForRender} onSubmit={handlerSubmitApp} />
           </Route>
           <Route path="/petition-created">
-            <ResultPage />
+            <ResultPage selectedProblem={selectedProblem} initiatives={initiatives} />
           </Route>
         </Switch>
       </Main>

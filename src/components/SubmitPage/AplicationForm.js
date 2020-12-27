@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Button from "../Buttons/Button";
 
-function ApplicationForm({ history, strsForRender }) {
+function ApplicationForm({ history, strsForRender, onSubmit }) {
   const [formData, setFormData] = useState({ recipient: "", fio: "", address: "", tel: "", date: "" });
 
   const handleChange = (e) => {
@@ -14,6 +14,9 @@ function ApplicationForm({ history, strsForRender }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const clone = { ...formData };
+    clone["strings"] = strsForRender;
+    onSubmit(clone);
     history.push("/petition-created");
   };
 

@@ -48,7 +48,8 @@ export const actualCards = [
   {
     modifier: "card-actual_size_m",
     img: actual1,
-    text: "“Я вижу, как взволнованные воды\nЗажаты в тесные водопроводы”",
+    text: `“Я вижу, как взволнованные воды \n
+           Зажаты в тесные водопроводы”`,
   },
   { modifier: "card-actual_size_m", img: actual2, text: "“Наконец пришла чума”" },
   { modifier: "card-actual_size_m", img: actual3, text: "“И лампочка мигает\nВсего в пятнадцать свеч”" },
