@@ -23,7 +23,7 @@ function ApplicationForm({ history, strsForRender }) {
   return (
     <form name="bioForm" className="form-bio" onSubmit={handleSubmit}>
       <div className="form-bio__data">
-        <h2 className="title">Оформите документ</h2>
+        <h2 className="title form-bio__title">Оформите документ</h2>
         <fieldset className="fieldset form-bio__fieldset">
           <h3 className="title title_size_medium form-bio__title">Введите адресата</h3>
           <textarea
@@ -85,7 +85,9 @@ function ApplicationForm({ history, strsForRender }) {
             value={formData[`date`] || currentDay}
           />
         </fieldset>
-        <p className="form-bio__info">Электронный документ будет доступен в личном кабинете</p>
+        <p className="form-bio__info">
+          Электронный документ будет доступен для распечатки и редактирования в личном кабинете.
+        </p>
       </div>
       <div className="form-bio__preview">
         <div className="preview">
@@ -114,7 +116,7 @@ function ApplicationForm({ history, strsForRender }) {
             <p className="preview__signature">/ подпись заявителя</p>
           </div>
         </div>
-        <Button type="submit" name="Отправить" element="application__control" />
+        <Button type="submit" name="Отправить" element="application__control btn_size_m" />
       </div>
     </form>
   );
