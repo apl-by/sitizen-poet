@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Проект команды 39: Гражданин поэт
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## О проекте
 
-## Available Scripts
+Проект представляет из себя веб-сервис для размещения общественных инициатив в формате стихотворений, составленных из цитат поэтов-классиков.
+Интерфейс поэтапного оформления обращения помогает пользователю:
 
-In the project directory, you can run:
+1. Определить специфику проблемы;
+2. Найти подходящие цитаты при помощи поиска по ключевым словам в единой базе стихотворений;
+3. Заполнить необходимые реквизиты с предпросмотром обращения;
+4. Опубликовать готовое обращение.
 
-### `yarn start`
+Сайт оптимизирован для следующих разрешений:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 1280px
+- _(soon)_ 768px
+- _(soon)_ 320px
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Участники
 
-### `yarn test`
+Проект выполнен в рамках двухнедельного Хакатона 2025 среди студентов Яндекс.Практикумума из факультетов Дизайна интерфейсов и Веб-разработки.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Над проектом усердно работали:
 
-### `yarn build`
+- Евгения Чистякова (дизайнер интерфейсов)
+- Александр Логунов (веб-разработчик)
+- Илья Бородулин (веб-разработчик)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Дизайн-проект
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Figma макет доступен по [этой ссылке](https://www.figma.com/file/OHmM1lMwTO7RdnehnsgdPx/%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B8%D0%BD-%D0%BF%D0%BE%D1%8D%D1%82-UI-20-12-20).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Использованные языки, технологии и методологии
 
-### `yarn eject`
+- React.js
+- Javascript
+- Grid layout
+- Figma
+- HTML
+- CSS
+- Semantic markup
+- Flexbox
+- CSS animations
+- BEM methodology
+- BEM nested file structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Как использовать
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Для сборки проекта склонируйте репозиторий и введите команду npm install. Для запуска проекта введите команду yarn start. Демо доступно на [этой странице](https://apl-by.github.io/sitizen-poet/).
+Работоспособность проверена в Google Chrome и Яндекс.Браузере.

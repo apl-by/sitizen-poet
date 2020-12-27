@@ -14,7 +14,7 @@ function Header() {
             return <HeaderLink name={item["name"]} path={item["path"]} key={index} />;
           })}
         </ul>
-        <button type="button" className="site-nav__btn-search"></button>
+        <button type="button" className="site-nav__btn-search" onClick={() => alert("🧐")}></button>
       </nav>
     </header>
   );
