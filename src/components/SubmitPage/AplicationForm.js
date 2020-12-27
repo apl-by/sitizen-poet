@@ -14,7 +14,7 @@ function ApplicationForm({ history, strsForRender }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/");
+    history.push("/petition-created");
   };
 
   let date = new Date();

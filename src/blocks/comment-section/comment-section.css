@@ -1,0 +1,5 @@
+.comment-section {
+  min-height: 400px;
+  padding-top: 48px;
+  flex-grow: 1;
+}

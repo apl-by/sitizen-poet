@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import TagPage from "./TagPage/TagPage";
 import InputPage from "./InputPage/InputPage";
 import SubmitPage from "./SubmitPage/SubmitPage";
+import ResultPage from "./ResultPage/ResultPage";
 import MainPage from "./MainPage/MainPage";
 
 function App() {
@@ -209,6 +210,9 @@ function App() {
           </Route>
           <Route path="/user-submit">
             <SubmitPage history={history} strsForRender={selectedArrForRender} />
+          </Route>
+          <Route path="/petition-created">
+            <ResultPage />
           </Route>
         </Switch>
       </Main>
