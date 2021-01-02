@@ -84,10 +84,9 @@ function App() {
       return api
         .getPoemStrings(item)
         .then((res) => {
-          const arrStrings = res.map((i) => {
+          return res.map((i) => {
             return i.fields.text[0];
           });
-          return arrStrings;
         })
         .catch((err) => alert(err));
     });
@@ -122,12 +121,10 @@ function App() {
   }, [strForSubmit]);
 
   const handleSelection = (id, boolean, upperCase) => {
-    const selectedStr = { ...isSelected };
     const strUpperCase = { ...strForSubmit };
-    boolean ? (selectedStr[id] = true) : (selectedStr[id] = false);
     boolean ? (strUpperCase[id] = upperCase) : delete strUpperCase[id];
     setStrForSubmit(strUpperCase);
-    setIsSelected(selectedStr);
+    setIsSelected({ ...isSelected, [id]: boolean });
   };
 
   // -----------Поиск одного слова  при редактировании + изменение связанных данных
@@ -135,16 +132,12 @@ function App() {
   const [isEdit, setIsEdit] = useState({});
 
   const handleEdit = (id) => {
-    const editStr = { ...isEdit };
-    editStr[id] = true;
-    setIsEdit(editStr);
+    setIsEdit({ ...isEdit, [id]: true });
   };
 
   const handleNewSearch = (tag, newTag, id) => {
     if (tag === newTag || newTag === "") {
-      const editStr = { ...isEdit };
-      editStr[id] = false;
-      setIsEdit(editStr);
+      setIsEdit({ ...isEdit, [id]: false });
       return;
     }
 
@@ -156,9 +149,7 @@ function App() {
         });
         const newObj = handleSearchRes({}, arrStrings, id, newTag);
 
-        const cloneRequestObj = { ...requestObj };
-        cloneRequestObj[id] = newObj[id];
-        setRequestObj(cloneRequestObj);
+        setRequestObj({ ...requestObj, [id]: newObj[id] });
 
         const cloneCurrentArr = [...currentArr];
         const newItem = getCurrentItem(newObj[id]);
@@ -167,9 +158,7 @@ function App() {
       })
       .catch((err) => alert(err))
       .finally(() => {
-        const editStr = { ...isEdit };
-        editStr[id] = false;
-        setIsEdit(editStr);
+        setIsEdit({ ...isEdit, [id]: false });
       });
 
     const cloneInput = currentInput.replace(/\s?$/, "");
