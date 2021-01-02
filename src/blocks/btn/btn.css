@@ -14,7 +14,7 @@
   opacity: 0.7;
 }
 
-.btn:active:enabled {
+.btn:active {
   color: #fff;
   background-color: #d00000;
 }

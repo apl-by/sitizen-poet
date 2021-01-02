@@ -17,7 +17,7 @@ function MainPage({ history, reset }) {
       <section className="hero">
         <div className="hero__content">
           <h1 className="title hero__title">Сайт гражданских инициатив</h1>
-          <Button type="button" name="Создать инициативу" element="hero__button" onClick={handlerReset} />
+          <Button type="button" name="Создать инициативу" mix="hero__button" onClick={handlerReset} />
         </div>
         <div className="hero__diagonal-box">
           <div className="hero__phrase"></div>
@@ -30,7 +30,7 @@ function MainPage({ history, reset }) {
           <h2 className="title how-it-works__title">Как это работает</h2>
           <ul className="how-it-works__cards">
             {tutorialCards.map((item, index) => {
-              return <TutorialCard item={item} key={index} />;
+              return <TutorialCard item={item} key={index} mix="how-it-works__card"/>;
             })}
           </ul>
         </div>
@@ -47,7 +47,7 @@ function MainPage({ history, reset }) {
           </ul>
           <Button
             type="button"
-            element="actual__btn"
+            mix="actual__btn"
             name="Смотреть ещё"
             onClick={() => alert("Страница с актуальными инициативами")}
           />
@@ -65,7 +65,7 @@ function MainPage({ history, reset }) {
           </ul>
           <Button
             type="button"
-            element="done__btn"
+            mix="done__btn"
             name="Смотреть ещё"
             onClick={() => alert("Страница с принятыми инициативами")}
           />

@@ -22,10 +22,13 @@
 @import url(./blocks/fieldset/fieldset.css);
 
 @import url(./blocks/btn/btn.css);
-@import url(./blocks/btn/_disabled/btn_disabled.css);
 @import url(./blocks/btn/_size/btn_size_m.css);
 @import url(./blocks/btn/_type/btn_type_light.css);
 @import url(./blocks/btn/_type/btn_type_square.css);
+
+@import url(./blocks/btn-arrow/btn-arrow.css);
+
+@import url(./blocks/btn-close/btn-close.css);
 
 @import url(./blocks/header/header.css);
 
@@ -63,7 +66,6 @@
 @import url(./blocks/application/__diagonal-box/application__diagonal-box.css);
 @import url(./blocks/application/__img-question/application__img-question.css);
 @import url(./blocks/application/__top/application__top.css);
-@import url(./blocks/application/__btn-back/application__btn-back.css);
 @import url(./blocks/application/__counter/application__counter.css);
 @import url(./blocks/application/__title/application__title.css);
 @import url(./blocks/application/__subtitle/application__subtitle.css);
@@ -84,7 +86,6 @@
 
 @import url(./blocks/form-strokes/form-strokes.css);
 @import url(./blocks/form-strokes/__span/form-strokes__span.css);
-@import url(./blocks/form-strokes/__columns/form-strokes__columns.css);
 @import url(./blocks/form-strokes/__list/form-strokes__list.css);
 @import url(./blocks/form-strokes/__item/form-strokes__item.css);
 @import url(./blocks/form-strokes/__input/form-strokes__input.css);
@@ -100,7 +101,6 @@
 @import url(./blocks/assembly/__item/assembly__item.css);
 @import url(./blocks/assembly/__item/_hidden/assembly__item_hidden.css);
 @import url(./blocks/assembly/__text/assembly__text.css);
-@import url(./blocks/assembly/__btn-close/assembly__btn-close.css);
 
 @import url(./blocks/form-bio/form-bio.css);
 @import url(./blocks/form-bio/__fieldset/form-bio__fieldset.css);

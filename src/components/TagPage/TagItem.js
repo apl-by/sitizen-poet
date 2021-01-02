@@ -7,7 +7,7 @@ function TagItem({ problemTag, onChange, name, selected }) {
         value={problemTag}
         className="form-survey__radio"
         onChange={onChange}
-        checked={selected === problemTag ? true : false}
+        checked={selected === problemTag}
       />
       <span className="form-survey__custom">{problemTag}</span>
     </label>

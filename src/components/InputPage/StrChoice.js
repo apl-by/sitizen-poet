@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import ButtonSquare from "../Buttons/ButtonSquare";
+import Button from "../Buttons/Button";
 
 function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, item }) {
   const [newTag, setNewTag] = useState(item.tag);
@@ -45,14 +45,15 @@ function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, it
         <li className="form-strokes__item">
           {children}
           {item.exist && (
-            <ButtonSquare type="button" element="form-strokes__btn-refresh" onClick={handleClickRefresh} />
+            <Button type="button" mix="form-strokes__btn-refresh" typeModifier="square" onClick={handleClickRefresh} />
           )}
-          {!item.exist && <ButtonSquare type="button" element="form-strokes__btn-edit" onClick={handleClickEdit} />}
-          <ButtonSquare
+          {!item.exist && <Button type="button" mix="form-strokes__btn-edit" typeModifier="square" onClick={handleClickEdit} />}
+          <Button
             type="button"
-            element="form-strokes__btn-push"
+            mix="form-strokes__btn-push"
+            typeModifier="square"
             onClick={handleClickAdd}
-            disabled={item.exist ? false : true}
+            disabled={!item.exist}
           />
         </li>
       )}
@@ -66,8 +67,8 @@ function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, it
             onChange={handleChange}
             autoFocus={true}
           />
-          <ButtonSquare type="submit" element="form-strokes__btn-confirm" />
-          <ButtonSquare type="button" element="form-strokes__btn-push" disabled={true} />
+          <Button type="submit" mix="form-strokes__btn-confirm"  typeModifier="square"/>
+          <Button type="button" mix="form-strokes__btn-push" typeModifier="square" disabled={true} />
         </form>
       )}
     </>

@@ -7,16 +7,12 @@ function ApplicationForm({ history, strsForRender, onSubmit }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const cloneFormData = { ...formData };
-    cloneFormData[name] = value;
-    setFormData(cloneFormData);
+    setFormData({...formData, [name]: value});
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const clone = { ...formData };
-    clone["strings"] = strsForRender;
-    onSubmit(clone);
+    onSubmit({ ...formData, ["strings"]: strsForRender});
     history.push("/petition-created");
   };
 
@@ -119,7 +115,7 @@ function ApplicationForm({ history, strsForRender, onSubmit }) {
             <p className="preview__signature">/ подпись заявителя</p>
           </div>
         </div>
-        <Button type="submit" name="Отправить" element="application__control btn_size_m" />
+        <Button type="submit" name="Отправить" mix="application__control" size="m" />
       </div>
     </form>
   );

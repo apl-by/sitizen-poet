@@ -69,7 +69,7 @@ function ResultPage({ selectedProblem, initiatives }) {
           <h3 className="title title_size_medium comment-section__title">Оставить комментарий:</h3>
           <div className="form-comment__input-area">
             <textarea className="form-comment__input"></textarea>
-            <button type="submit" className="btn btn_size_m form-comment__btn btn_disabled" disabled>
+            <button type="submit" className="btn btn_size_m form-comment__btn" disabled>
               Отправить
             </button>
           </div>
