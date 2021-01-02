@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
   const [year, setYear] = useState(2020);
 
-  const date = new Date();
-  const currentYear = date.getFullYear();
-  if (currentYear > 2020) {
-    setYear(`2020-${currentYear}`);
-  }
+  useEffect(() => {
+    const date = new Date();
+    const currentYear = date.getFullYear();
+    if (currentYear > 2020) {
+      setYear(`2020-${currentYear}`);
+    }
+  }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
