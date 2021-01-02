@@ -1,5 +1,7 @@
+import { URL } from "./constants"
+
 const config = {
-  baseUrl: "https://buymebuyme.xyz",
+  baseUrl: URL,
   headers: {
     "Content-Type": "application/json",
   },

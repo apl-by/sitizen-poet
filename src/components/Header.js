@@ -10,8 +10,8 @@ function Header() {
           Гражданин поэт
         </Link>
         <ul className="site-nav__list">
-          {headerLinks.map((item, index) => {
-            return <HeaderLink name={item["name"]} path={item["path"]} key={index} />;
+          {headerLinks.map((item) => {
+            return <HeaderLink name={item["name"]} path={item["path"]} key={item.id} />;
           })}
         </ul>
         <button type="button" className="site-nav__btn-search" onClick={() => alert("🧐")}></button>
