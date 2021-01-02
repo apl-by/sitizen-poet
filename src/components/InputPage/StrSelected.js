@@ -1,14 +1,22 @@
-import ButtonDelete from "../Buttons/ButtonDelete";
+import ButtonClose from "../Buttons/ButtonClose";
+import cn from "classnames";
 
-function StrSelected({ children, isSelected, onDelete, id }) {
+function StrSelected({ children, isSelected, onDelete, id, mix }) {
   const handleClickDelete = () => {
     onDelete(id, false);
   };
 
+  const classNames = cn(
+    mix,
+    {
+      "assembly__item_hidden": !isSelected
+    }
+  )
+
   return (
-    <li className={`assembly__item ${!isSelected && "assembly__item_hidden"}`}>
+    <li className={classNames}>
       {children}
-      <ButtonDelete onClick={handleClickDelete} />
+      <ButtonClose onClick={handleClickDelete} />
     </li>
   );
 }

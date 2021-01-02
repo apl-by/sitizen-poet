@@ -1,7 +1,7 @@
 function ButtonArrow({ history }) {
   return (
     <button
-      className="application__btn-back"
+      className="btn-arrow"
       type="button"
       aria-label="Назад"
       onClick={() => history.goBack()}

@@ -41,7 +41,7 @@ function InputPage({
         <p className="application__subtitle">Не больше 6 слов</p>
         <InputForm onChange={onChange} value={value} onSearchSubmit={onSearchSubmit} invalidInput={invalidInput} />
 
-        <div className="form-strokes form-strokes__columns">
+        <div className="form-strokes">
           <ul className="form-strokes__list">
             {currentArr[0] &&
               currentArr.map((item) => {
@@ -65,7 +65,7 @@ function InputPage({
               {currentArr[0] &&
                 currentArr.map((item) => {
                   return (
-                    <StrSelected key={item.id} isSelected={isSelected[item.id]} onDelete={onAddDelete} id={item.id}>
+                    <StrSelected key={item.id} isSelected={isSelected[item.id]} onDelete={onAddDelete} id={item.id} mix="assembly__item">
                       {MyComponent(item.strForRender, "assembly__text")}
                     </StrSelected>
                   );
@@ -76,9 +76,10 @@ function InputPage({
         <Button
           type="button"
           name="Далее"
-          element="btn_size_m application__control"
+          mix="application__control"
+          size="m"
           onClick={() => history.push("/user-submit")}
-          disabled={Object.keys(strForSubmit).length ? false : true}
+          disabled={!Object.keys(strForSubmit).length}
         />
       </div>
     </section>

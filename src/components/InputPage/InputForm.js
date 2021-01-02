@@ -19,7 +19,8 @@ function InputForm({ onChange, value, onSearchSubmit, invalidInput }) {
         />
         <span className="form-findwords__valid">{invalidInput}</span>
       </label>
-      <Button type="submit" name="Найти строки" element="btn_size_m form-findwords__btn" />
+      <Button type="submit" name="Найти строки" size="m"
+      mix="form-findwords__btn" />
     </form>
   );
 }

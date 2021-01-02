@@ -58,7 +58,8 @@ function TagPage({ history, onChange, selectedTag }) {
           <Button
             type="submit"
             name="Далее"
-            element="application__control btn_size_m"
+            mix="application__control"
+            size="m"
             disabled={!selectedTag["type"]}
           />
         </form>

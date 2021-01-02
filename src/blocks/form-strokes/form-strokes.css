@@ -1,4 +1,6 @@
 .form-strokes {
   z-index: 1;
   margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
 }

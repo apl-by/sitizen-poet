@@ -1,6 +1,11 @@
-function TutorialCard({ item }) {
+import cn from "classnames";
+
+function TutorialCard({ item,  mix }) {
+
+  const classNames = cn("card-step", mix);
+
   return (
-    <li className="card-step how-it-works__card">
+    <li className={classNames}>
       <figure className="card-step__figure">
         <img className="card-step__image" alt="Изображение карточки" src={item.img} />
         <figcaption className="card-step__number">{item.number}</figcaption>
