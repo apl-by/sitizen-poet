@@ -29,8 +29,8 @@ function MainPage({ history, reset }) {
         <div className="how-it-works__content">
           <h2 className="title how-it-works__title">Как это работает</h2>
           <ul className="how-it-works__cards">
-            {tutorialCards.map((item, index) => {
-              return <TutorialCard item={item} key={index} mix="how-it-works__card"/>;
+            {tutorialCards.map((item) => {
+              return <TutorialCard item={item} key={item.id} mix="how-it-works__card"/>;
             })}
           </ul>
         </div>
@@ -41,8 +41,8 @@ function MainPage({ history, reset }) {
         <div className="actual__content">
           <h2 className="title actual__title">Актуальные инициативы</h2>
           <ul className="actual__cards">
-            {actualCards.map((item, index) => {
-              return <ActualCard item={item} key={index} />;
+            {actualCards.map((item) => {
+              return <ActualCard item={item} key={item.id} />;
             })}
           </ul>
           <Button
@@ -59,8 +59,8 @@ function MainPage({ history, reset }) {
         <div className="done__content">
           <h2 className="title done__title">Уже приняты</h2>
           <ul className="done__cards">
-            {doneCards.map((item, index) => {
-              return <DoneCard item={item} key={index} />;
+            {doneCards.map((item) => {
+              return <DoneCard item={item} key={item.id} />;
             })}
           </ul>
           <Button

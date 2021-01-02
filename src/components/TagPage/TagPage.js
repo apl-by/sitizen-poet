@@ -24,14 +24,14 @@ function TagPage({ history, onChange, selectedTag }) {
           <fieldset className="fieldset form-survey__fieldset">
             <h2 className="title application__title">Какого рода проблема?</h2>
             <div className="form-survey__list">
-              {problemTags.map((item, index) => {
+              {problemTags.map((item) => {
                 return (
                   <TagItem
-                    problemTag={item}
+                    problemTag={item.tag}
                     onChange={onChange}
                     name="problem"
                     selected={selectedTag["problem"]}
-                    key={index}
+                    key={item.id}
                   />
                 );
               })}
@@ -41,13 +41,13 @@ function TagPage({ history, onChange, selectedTag }) {
             <fieldset className="fieldset form-survey__fieldset">
               <h3 className="title title_size_medium">Что не так?</h3>
               <div className="form-survey__list">
-                {typeProblems[selectedTag["problem"]].map((item, index) => {
+                {typeProblems[selectedTag["problem"]].map((item) => {
                   return (
                     <TagItem
-                      problemTag={item}
+                      problemTag={item.tag}
                       onChange={onChange}
                       name="subject"
-                      key={index}
+                      key={item.id}
                       selected={selectedTag["type"]}
                     />
                   );
