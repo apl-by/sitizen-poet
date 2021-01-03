@@ -1,6 +1,6 @@
 .application__counter {
   margin: 0;
   color: #fff;
-  font-family: "RodchenkoCTT";
+  font-family: "RodchenkoCTT", Helvetica, Arial, sans-serif;
   font-size: 36px;
 }

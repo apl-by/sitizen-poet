@@ -39,22 +39,22 @@ function ResultPage({ selectedProblem, initiatives }) {
           <p className="overview__socials-title">Поделиться:</p>
           <ul className="overview__socials socials">
             <li className="socials__item">
-              <a href="#" className="link socials__link" onClick={handleClick}>
+              <a href="/" className="link socials__link" onClick={handleClick}>
                 <img src={iconFacebook} alt="Иконка Фэйсбук" className="socials__icon" />
               </a>
             </li>
             <li className="socials__item">
-              <a href="#" className="link socials__link" onClick={handleClick}>
+              <a href="/" className="link socials__link" onClick={handleClick}>
                 <img src={iconVk} alt="Иконка Вконтакте" className="socials__icon" />
               </a>
             </li>
             <li className="socials__item">
-              <a href="#" className="link socials__link" onClick={handleClick}>
+              <a href="/" className="link socials__link" onClick={handleClick}>
                 <img src={iconInstagram} alt="Иконка Инстаграм" className="socials__icon" />
               </a>
             </li>
             <li className="socials__item">
-              <a href="#" className="link socials__link" onClick={handleClick}>
+              <a href="/" className="link socials__link" onClick={handleClick}>
                 <img src={iconOk} alt="Иконка Одноклассники" className="socials__icon" />
               </a>
             </li>
