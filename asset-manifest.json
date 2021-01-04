@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/sitizen-poet/static/css/main.391cfac4.chunk.css",
-    "main.js": "/sitizen-poet/static/js/main.b4a10de1.chunk.js",
-    "main.js.map": "/sitizen-poet/static/js/main.b4a10de1.chunk.js.map",
-    "runtime-main.js": "/sitizen-poet/static/js/runtime-main.02bcc0e9.js",
-    "runtime-main.js.map": "/sitizen-poet/static/js/runtime-main.02bcc0e9.js.map",
-    "static/js/2.a02cd8b9.chunk.js": "/sitizen-poet/static/js/2.a02cd8b9.chunk.js",
-    "static/js/2.a02cd8b9.chunk.js.map": "/sitizen-poet/static/js/2.a02cd8b9.chunk.js.map",
-    "static/js/3.b30694b2.chunk.js": "/sitizen-poet/static/js/3.b30694b2.chunk.js",
-    "static/js/3.b30694b2.chunk.js.map": "/sitizen-poet/static/js/3.b30694b2.chunk.js.map",
+    "main.css": "/sitizen-poet/static/css/main.989ea800.chunk.css",
+    "main.js": "/sitizen-poet/static/js/main.20905605.chunk.js",
+    "main.js.map": "/sitizen-poet/static/js/main.20905605.chunk.js.map",
+    "runtime-main.js": "/sitizen-poet/static/js/runtime-main.92c29ef8.js",
+    "runtime-main.js.map": "/sitizen-poet/static/js/runtime-main.92c29ef8.js.map",
+    "static/js/2.8b8e82c8.chunk.js": "/sitizen-poet/static/js/2.8b8e82c8.chunk.js",
+    "static/js/2.8b8e82c8.chunk.js.map": "/sitizen-poet/static/js/2.8b8e82c8.chunk.js.map",
+    "static/js/3.becb901d.chunk.js": "/sitizen-poet/static/js/3.becb901d.chunk.js",
+    "static/js/3.becb901d.chunk.js.map": "/sitizen-poet/static/js/3.becb901d.chunk.js.map",
     "index.html": "/sitizen-poet/index.html",
-    "static/css/main.391cfac4.chunk.css.map": "/sitizen-poet/static/css/main.391cfac4.chunk.css.map",
-    "static/js/2.a02cd8b9.chunk.js.LICENSE.txt": "/sitizen-poet/static/js/2.a02cd8b9.chunk.js.LICENSE.txt",
+    "static/css/main.989ea800.chunk.css.map": "/sitizen-poet/static/css/main.989ea800.chunk.css.map",
+    "static/js/2.8b8e82c8.chunk.js.LICENSE.txt": "/sitizen-poet/static/js/2.8b8e82c8.chunk.js.LICENSE.txt",
     "static/media/index.css": "/sitizen-poet/static/media/rodchenkoctt.d1eb0f5a.ttf",
     "static/media/actual-1.faedb69d.jpg": "/sitizen-poet/static/media/actual-1.faedb69d.jpg",
     "static/media/actual-2.ba3a1b3c.jpg": "/sitizen-poet/static/media/actual-2.ba3a1b3c.jpg",
@@ -20,6 +20,7 @@
     "static/media/actual-5.7814733f.jpg": "/sitizen-poet/static/media/actual-5.7814733f.jpg",
     "static/media/done-1.c4451d2b.jpg": "/sitizen-poet/static/media/done-1.c4451d2b.jpg",
     "static/media/done-2.1f48cbc8.jpg": "/sitizen-poet/static/media/done-2.1f48cbc8.jpg",
+    "static/media/hero-mayak-mobil.4082bce3.png": "/sitizen-poet/static/media/hero-mayak-mobil.4082bce3.png",
     "static/media/hero-mayak.c9c41840.png": "/sitizen-poet/static/media/hero-mayak.c9c41840.png",
     "static/media/how-it-works-1.43c06a80.jpg": "/sitizen-poet/static/media/how-it-works-1.43c06a80.jpg",
     "static/media/how-it-works-2.be7041c9.jpg": "/sitizen-poet/static/media/how-it-works-2.be7041c9.jpg",
@@ -35,9 +36,9 @@
     "static/media/overview-place.04634391.jpg": "/sitizen-poet/static/media/overview-place.04634391.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.02bcc0e9.js",
-    "static/js/2.a02cd8b9.chunk.js",
-    "static/css/main.391cfac4.chunk.css",
-    "static/js/main.b4a10de1.chunk.js"
+    "static/js/runtime-main.92c29ef8.js",
+    "static/js/2.8b8e82c8.chunk.js",
+    "static/css/main.989ea800.chunk.css",
+    "static/js/main.20905605.chunk.js"
   ]
 }
