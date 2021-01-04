@@ -4,3 +4,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media screen and (max-width: 570px) {
+  .btn_type_square {
+    width: 55px;
+    height: 55px;
+  }
+}

@@ -5,3 +5,9 @@
   margin: 17px 0 0;
   border: 0;
 }
+
+@media screen and (max-width: 570px) {
+  .form-findwords__label {
+    margin: 7px 0 0;
+  }
+}

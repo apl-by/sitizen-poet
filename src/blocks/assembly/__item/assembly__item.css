@@ -10,3 +10,10 @@
 .assembly__item:first-of-type {
   margin-top: 0;
 }
+
+@media screen and (max-width: 570px) {
+  .assembly__item {
+    height: 50px;
+    margin-top: 8px;
+  }
+}

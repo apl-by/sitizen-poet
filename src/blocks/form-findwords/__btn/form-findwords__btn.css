@@ -1,3 +1,9 @@
 .form-findwords__btn {
   margin-top: 24px;
 }
+
+@media screen and (max-width: 425px) {
+  .form-findwords__btn {
+    align-self: flex-end;
+  }
+}
