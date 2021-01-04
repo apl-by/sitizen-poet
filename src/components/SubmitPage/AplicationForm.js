@@ -7,12 +7,12 @@ function ApplicationForm({ history, strsForRender, onSubmit }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({...formData, [name]: value});
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ ...formData, ["strings"]: strsForRender});
+    onSubmit({ ...formData, strings: strsForRender });
     history.push("/petition-created");
   };
 

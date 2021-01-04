@@ -4,3 +4,19 @@
   text-transform: uppercase;
   color: #fff;
 }
+
+@media screen and (max-width: 760px) {
+  .how-it-works__title {
+    align-self: flex-start;
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .how-it-works__title {
+    margin-left: 15px;
+    font-size: 24px;
+    line-height: 26px;
+  }
+}

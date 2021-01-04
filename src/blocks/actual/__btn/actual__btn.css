@@ -2,3 +2,15 @@
   align-self: flex-end;
   margin-top: 48px;
 }
+
+@media screen and (max-width: 1110px) {
+  .actual__btn {
+    margin-right: calc((100vw - 570px) / 2);
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .actual__btn {
+    margin: 24px 0 0;
+  }
+}

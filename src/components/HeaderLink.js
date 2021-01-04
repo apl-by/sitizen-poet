@@ -5,8 +5,8 @@ function HeaderLink({ name, path }) {
   };
 
   return (
-    <li className="site-nav__item">
-      <a href={path} className="site-nav__link" onClick={handleClick}>
+    <li className="nav-item">
+      <a href={path} className="nav-item__link" onClick={handleClick}>
         {name}
       </a>
     </li>

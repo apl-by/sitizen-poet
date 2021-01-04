@@ -1,4 +1,4 @@
-.site-nav__link {
+.nav-item__link {
   margin-left: 32px;
   padding: 37px 22px;
   transition: background-color 0.1s ease-out;
@@ -11,6 +11,21 @@
   line-height: 1.1;
 }
 
-.site-nav__link:hover {
+.nav-item__link:hover {
   background-color: #ff6464;
+}
+
+@media screen and (max-width: 1110px) {
+  .nav-item__link {
+    margin-left: 0;
+    font-size: 22px;
+    padding: 37px 20px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .nav-item__link {
+    padding: 0;
+    font-size: 18px;
+  }
 }

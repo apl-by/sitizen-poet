@@ -5,3 +5,10 @@
   line-height: 1.35;
   white-space: pre-wrap;
 }
+
+@media screen and (max-width: 570px) {
+  .card-done__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

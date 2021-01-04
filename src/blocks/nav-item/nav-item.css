@@ -1,0 +1,10 @@
+@media screen and (max-width: 760px) {
+  .nav-item {
+    width: calc(100% - 30px);
+    min-height: 57px;
+    border-top: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

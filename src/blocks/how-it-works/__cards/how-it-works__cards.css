@@ -6,3 +6,9 @@
   padding-left: 0;
   list-style: none;
 }
+
+@media screen and (max-width: 570px) {
+  .how-it-works__cards {
+    margin: 16px 0 0;
+  }
+}

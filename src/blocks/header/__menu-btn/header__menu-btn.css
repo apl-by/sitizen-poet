@@ -1,0 +1,24 @@
+@media screen and (max-width: 760px) {
+  .header__menu-btn {
+    background: none;
+    box-shadow: none;
+    border: none;
+    background-image: url("../../../images/menu-btn.svg");
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 28px;
+    position: absolute;
+    top: 36px;
+    right: 14px;
+  }
+
+  .header__menu-btn:focus {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .header__menu-btn {
+    top: 22px;
+  }
+}
