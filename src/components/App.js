@@ -1,5 +1,6 @@
 import { Route, Switch, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
+import MediaQuery from "react-responsive";
 
 import { api } from "../utils/api";
 import { getCurrentItem, handleSearchRes } from "../utils/utils";
@@ -12,6 +13,7 @@ import InputPage from "./InputPage/InputPage";
 import SubmitPage from "./SubmitPage/SubmitPage";
 import ResultPage from "./ResultPage/ResultPage";
 import MainPage from "./MainPage/MainPage";
+import ButtonArrow from "./Buttons/ButtonArrow";
 
 function App() {
   const history = useHistory();
@@ -205,9 +207,15 @@ function App() {
             <MainPage history={history} reset={handlerReset} />
           </Route>
           <Route path="/tags-selection">
+            <MediaQuery maxWidth={760}>
+              <ButtonArrow history={history} />
+            </MediaQuery>
             <TagPage history={history} onChange={handleChange} selectedTag={selectedProblem} />
           </Route>
           <Route path="/user-input">
+            <MediaQuery maxWidth={760}>
+              <ButtonArrow history={history} />
+            </MediaQuery>
             <InputPage
               onChange={handleChangeInput}
               onRefresh={refreshString}
@@ -225,6 +233,9 @@ function App() {
             />
           </Route>
           <Route path="/user-submit">
+            <MediaQuery maxWidth={760}>
+              <ButtonArrow history={history} />
+            </MediaQuery>
             <SubmitPage history={history} strsForRender={selectedArrForRender} onSubmit={handlerSubmitApp} />
           </Route>
           <Route path="/petition-created">

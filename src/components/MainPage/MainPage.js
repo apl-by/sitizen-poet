@@ -1,5 +1,5 @@
 import mayak from "../../images/hero-mayak.png";
-import mayakMobil from "../../images/hero-mayak-mobil.png";
+import mayakMobile from "../../images/hero-mayak-mobil.png";
 import { tutorialCards, actualCards, actualCardsMobil, doneCards } from "../../utils/constants";
 import { useMediaQuery } from "react-responsive";
 
@@ -10,10 +10,10 @@ import TutorialCard from "./TutorialCard";
 
 function MainPage({ history, reset }) {
   const isLaptop = useMediaQuery({ query: "(max-width: 760px)" });
-  const isMobil = useMediaQuery({ query: "(max-width: 425px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 425px)" });
 
   const cardsForRender = isLaptop ? actualCardsMobil : actualCards;
-  const imgHero = isMobil ? mayakMobil : mayak;
+  const imgHero = isMobile ? mayakMobile : mayak;
 
   const handlerReset = () => {
     reset();

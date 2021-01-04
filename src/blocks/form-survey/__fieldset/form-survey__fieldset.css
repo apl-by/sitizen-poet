@@ -5,3 +5,9 @@
 .form-survey__fieldset:first-of-type {
   margin-top: 0;
 }
+
+@media screen and (max-width: 760px) {
+  .form-survey__fieldset {
+    margin-top: 40px;
+  }
+}

@@ -3,3 +3,27 @@
   bottom: 0;
   left: 0;
 }
+
+@media screen and (max-width: 1110px) {
+  .application__img-question {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .application__img-question {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .application__img-question {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .application__img-question {
+    width: 195px;
+  }
+}
