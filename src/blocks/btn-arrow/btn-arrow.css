@@ -13,3 +13,20 @@
 .btn-arrow:hover {
   opacity: 0.7;
 }
+
+@media screen and (max-width: 760px) {
+  .btn-arrow {
+    width: 39x;
+    height: 23px;
+    position: absolute;
+    top: -61px;
+    left: 19px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .btn-arrow {
+    top: -46px;
+  }
+}

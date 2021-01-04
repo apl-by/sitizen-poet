@@ -7,3 +7,9 @@
   transform: skewY(15deg) translateY(-50%);
   background-color: #262524;
 }
+
+@media screen and (max-width: 570px) {
+  .application__diagonal-box {
+    min-height: 250px;
+  }
+}

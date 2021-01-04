@@ -5,3 +5,9 @@
   flex-grow: 1;
   min-height: 875px;
 }
+
+@media screen and (max-width: 570px) {
+  .form-survey {
+    min-height: 690px;
+  }
+}

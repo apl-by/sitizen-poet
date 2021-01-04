@@ -23,6 +23,8 @@
 
 @import url(./blocks/btn/btn.css);
 @import url(./blocks/btn/_size/btn_size_m.css);
+@import url(./blocks/btn/_mobile/btn_mobile_short.css);
+@import url(./blocks/btn/_mobile/btn_mobile_long.css);
 @import url(./blocks/btn/_type/btn_type_light.css);
 @import url(./blocks/btn/_type/btn_type_square.css);
 
