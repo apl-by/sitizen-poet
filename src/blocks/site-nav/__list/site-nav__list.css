@@ -5,3 +5,15 @@
   padding-left: 0;
   list-style: none;
 }
+
+@media screen and (max-width: 1110px) {
+  .site-nav__list {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .site-nav__list {
+    flex-direction: column;
+  }
+}

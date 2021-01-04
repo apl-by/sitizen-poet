@@ -1,0 +1,24 @@
+@media screen and (max-width: 760px) {
+  .header__close-menu {
+    background: none;
+    box-shadow: none;
+    border: none;
+    background-image: url("../../../images/close-menu.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 35px;
+    right: 14px;
+  }
+
+  .header__close-menu:focus {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .header__close-menu {
+    top: 22px;
+  }
+}

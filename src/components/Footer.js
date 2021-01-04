@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MediaQuery from "react-responsive";
 
 function Footer() {
   const [year, setYear] = useState(2020);
@@ -24,7 +25,9 @@ function Footer() {
           <Link className="link logo logo_place_footer" to="/">
             Гражданин поэт
           </Link>
-          <p className="footer__author">&copy; {year} / Team39</p>
+          <MediaQuery minWidth={761}>
+            <p className="footer__author">&copy; {year} / Team39</p>
+          </MediaQuery>
         </div>
         <nav className="footer__column footer__column_content_info">
           <ul className="footer__column-links">
@@ -54,6 +57,9 @@ function Footer() {
             </li>
           </ul>
         </nav>
+        <MediaQuery maxWidth={760}>
+          <p className="footer__author">&copy; {year} / Team39</p>
+        </MediaQuery>
       </div>
     </footer>
   );

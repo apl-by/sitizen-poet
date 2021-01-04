@@ -3,3 +3,27 @@
   bottom: 0;
   left: 0;
 }
+
+@media screen and (max-width: 1110px) {
+  .hero__mayak {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .hero__mayak {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .hero__mayak {
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero__mayak {
+    bottom: 44px;
+  }
+}

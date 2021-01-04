@@ -5,3 +5,9 @@
   min-height: 100px;
   margin: 64px auto 0;
 }
+
+@media screen and (max-width: 570px) {
+  .how-it-works__content {
+    margin: 31px 15px 0;
+  }
+}

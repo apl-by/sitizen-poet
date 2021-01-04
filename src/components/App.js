@@ -174,6 +174,7 @@ function App() {
   const [initiatives, setInitiatives] = useState({ i: 0 });
 
   const handlerSubmitApp = (item) => {
+    console.log(item);
     const clone = { ...initiatives };
     clone[clone["i"] + 1] = item;
     clone.i += 1;

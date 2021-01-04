@@ -1,5 +1,7 @@
 import mayak from "../../images/hero-mayak.png";
-import { tutorialCards, actualCards, doneCards } from "../../utils/constants";
+import mayakMobil from "../../images/hero-mayak-mobil.png";
+import { tutorialCards, actualCards, actualCardsMobil, doneCards } from "../../utils/constants";
+import { useMediaQuery } from "react-responsive";
 
 import Button from "../Buttons/Button";
 import DoneCard from "./DoneCard";
@@ -7,6 +9,12 @@ import ActualCard from "./ActualCard";
 import TutorialCard from "./TutorialCard";
 
 function MainPage({ history, reset }) {
+  const isLaptop = useMediaQuery({ query: "(max-width: 760px)" });
+  const isMobil = useMediaQuery({ query: "(max-width: 425px)" });
+
+  const cardsForRender = isLaptop ? actualCardsMobil : actualCards;
+  const imgHero = isMobil ? mayakMobil : mayak;
+
   const handlerReset = () => {
     reset();
     history.push("/tags-selection");
@@ -22,7 +30,7 @@ function MainPage({ history, reset }) {
         <div className="hero__diagonal-box">
           <div className="hero__phrase"></div>
         </div>
-        <img src={mayak} alt="Маяковский с вытянутой рукой" className="hero__mayak" />
+        <img src={imgHero} alt="Маяковский с вытянутой рукой" className="hero__mayak" />
       </section>
 
       <section className="how-it-works">
@@ -30,7 +38,7 @@ function MainPage({ history, reset }) {
           <h2 className="title how-it-works__title">Как это работает</h2>
           <ul className="how-it-works__cards">
             {tutorialCards.map((item) => {
-              return <TutorialCard item={item} key={item.id} mix="how-it-works__card"/>;
+              return <TutorialCard item={item} key={item.id} mix="how-it-works__card" />;
             })}
           </ul>
         </div>
@@ -41,7 +49,7 @@ function MainPage({ history, reset }) {
         <div className="actual__content">
           <h2 className="title actual__title">Актуальные инициативы</h2>
           <ul className="actual__cards">
-            {actualCards.map((item) => {
+            {cardsForRender.map((item) => {
               return <ActualCard item={item} key={item.id} />;
             })}
           </ul>

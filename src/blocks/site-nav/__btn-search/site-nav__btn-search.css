@@ -15,3 +15,9 @@
   cursor: pointer;
   background-color: #ff6464;
 }
+
+@media screen and (max-width: 1110px) {
+  .site-nav__btn-search {
+    width: 70px;
+  }
+}
