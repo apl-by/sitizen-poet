@@ -191,6 +191,7 @@
 @import url(./blocks/overview/__actions/overview__actions.css);
 @import url(./blocks/overview/__btn/overview__btn.css);
 @import url(./blocks/overview/__socials-title/overview__socials-title.css);
+@import url(./blocks/overview/__image/overview__image.css);
 
 @import url(./blocks/socials/socials.css);
 @import url(./blocks/socials/__item/socials__item.css);

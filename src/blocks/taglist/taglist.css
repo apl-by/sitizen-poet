@@ -7,3 +7,16 @@
   padding-left: 0;
   list-style: none;
 }
+
+@media screen and (max-width: 1110px) {
+  .taglist {
+    margin: 0 0 0 50px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .taglist {
+    margin: 0;
+    justify-content: center;
+  }
+}

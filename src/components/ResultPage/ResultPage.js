@@ -1,3 +1,5 @@
+import MediaQuery from "react-responsive";
+
 import iconFacebook from "../../images/icon-facebook.svg";
 import iconInstagram from "../../images/icon-instagram.svg";
 import iconOk from "../../images/icon-ok.svg";
@@ -30,39 +32,74 @@ function ResultPage({ selectedProblem, initiatives }) {
               );
             })}
           </div>
+          <MediaQuery maxWidth={1110}>
+            <button className="overview__btn" type="button" disabled={true}>
+              Развернуть
+            </button>
+          </MediaQuery>
           <img src={overviewPlace} alt="Изображение проблемы" className="overview__image" />
+          <MediaQuery maxWidth={1110}>
+            <ul className="overview__socials socials">
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconFacebook} alt="Иконка Фэйсбук" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconVk} alt="Иконка Вконтакте" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconInstagram} alt="Иконка Инстаграм" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconOk} alt="Иконка Одноклассники" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <button className="socials__btn-expand" type="button"></button>
+              </li>
+            </ul>
+          </MediaQuery>
         </div>
-        <div className="overview__actions">
-          <button className="overview__btn" type="button" disabled={true}>
-            Развернуть
-          </button>
-          <p className="overview__socials-title">Поделиться:</p>
-          <ul className="overview__socials socials">
-            <li className="socials__item">
-              <a href="/" className="link socials__link" onClick={handleClick}>
-                <img src={iconFacebook} alt="Иконка Фэйсбук" className="socials__icon" />
-              </a>
-            </li>
-            <li className="socials__item">
-              <a href="/" className="link socials__link" onClick={handleClick}>
-                <img src={iconVk} alt="Иконка Вконтакте" className="socials__icon" />
-              </a>
-            </li>
-            <li className="socials__item">
-              <a href="/" className="link socials__link" onClick={handleClick}>
-                <img src={iconInstagram} alt="Иконка Инстаграм" className="socials__icon" />
-              </a>
-            </li>
-            <li className="socials__item">
-              <a href="/" className="link socials__link" onClick={handleClick}>
-                <img src={iconOk} alt="Иконка Одноклассники" className="socials__icon" />
-              </a>
-            </li>
-            <li className="socials__item">
-              <button className="socials__btn-expand" type="button"></button>
-            </li>
-          </ul>
-        </div>
+
+        <MediaQuery minWidth={1111}>
+          <div className="overview__actions">
+            <button className="overview__btn" type="button" disabled={true}>
+              Развернуть
+            </button>
+            <p className="overview__socials-title">Поделиться:</p>
+            <ul className="overview__socials socials">
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconFacebook} alt="Иконка Фэйсбук" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconVk} alt="Иконка Вконтакте" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconInstagram} alt="Иконка Инстаграм" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <a href="/" className="link socials__link" onClick={handleClick}>
+                  <img src={iconOk} alt="Иконка Одноклассники" className="socials__icon" />
+                </a>
+              </li>
+              <li className="socials__item">
+                <button className="socials__btn-expand" type="button"></button>
+              </li>
+            </ul>
+          </div>
+        </MediaQuery>
       </section>
       <section className="comment-section">
         <form name="commentForm" className="comment-section__form form-comment">
