@@ -3,3 +3,10 @@
   height: 36px;
   object-fit: contain;
 }
+
+@media screen and (max-width: 570px) {
+  .socials__icon {
+    width: 30px;
+    height: 30px;
+  }
+}

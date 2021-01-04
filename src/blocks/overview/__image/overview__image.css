@@ -1,4 +1,7 @@
 .overview__image {
-  width: 445px;
-  height: 296px;
+  max-width: 445px;
+  max-height: 296px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }

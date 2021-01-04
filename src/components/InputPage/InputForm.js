@@ -16,11 +16,11 @@ function InputForm({ onChange, value, onSearchSubmit, invalidInput }) {
           value={value}
           onChange={onChange}
           autoFocus={true}
+          autoComplete="off"
         />
         <span className="form-findwords__valid">{invalidInput}</span>
       </label>
-      <Button type="submit" name="Найти строки" size="m"
-      mix="form-findwords__btn" />
+      <Button type="submit" name="Найти строки" size="m" mix="form-findwords__btn" />
     </form>
   );
 }

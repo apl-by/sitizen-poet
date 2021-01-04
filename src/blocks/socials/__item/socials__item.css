@@ -5,3 +5,9 @@
 .socials__item:last-of-type {
   margin-right: 15px;
 }
+
+@media screen and (max-width: 570px) {
+  .socials__item {
+    margin-right: 40px;
+  }
+}

@@ -8,3 +8,10 @@
   font-weight: 400;
   font-style: italic;
 }
+
+@media screen and (max-width: 570px) {
+  .taglist__item {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}
