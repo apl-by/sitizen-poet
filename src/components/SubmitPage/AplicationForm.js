@@ -1,8 +1,14 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import Button from "../Buttons/Button";
 
 function ApplicationForm({ history, strsForRender, onSubmit }) {
+  const isMobile = useMediaQuery({ query: "(max-width: 425px)" });
+
+  const sizeModifier = !isMobile ? "m" : false;
+  const mobileModifier = isMobile ? "long" : false;
+
   const [formData, setFormData] = useState({ recipient: "", fio: "", address: "", tel: "", date: "" });
 
   const handleChange = (e) => {
@@ -34,7 +40,7 @@ function ApplicationForm({ history, strsForRender, onSubmit }) {
           ></textarea>
         </fieldset>
         <fieldset className="fieldset form-bio__fieldset">
-          <h3 className="title title_size_medium form-bio__title">Введите ваши данные</h3>
+          <h3 className="title title_size_medium form-bio__title title_type_black">Введите ваши данные</h3>
           <label htmlFor="fio" className="form-bio__label">
             ФИО*
           </label>
@@ -115,7 +121,7 @@ function ApplicationForm({ history, strsForRender, onSubmit }) {
             <p className="preview__signature">/ подпись заявителя</p>
           </div>
         </div>
-        <Button type="submit" name="Отправить" mix="application__control" size="m" />
+        <Button type="submit" name="Отправить" mix="application__control" size={sizeModifier} mobile={mobileModifier} />
       </div>
     </form>
   );

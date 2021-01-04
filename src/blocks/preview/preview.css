@@ -2,11 +2,35 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 540px;
+  width: 614px;
   min-height: 764px;
   padding: 37px 47px;
   background-color: #fff;
   font-family: "PTSerif", Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 660px) {
+  .preview {
+    width: calc(100vw - 30px);
+    min-height: 750px;
+    padding: 20px 25px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .preview {
+    min-height: 630px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .preview {
+    padding: 10px 10px;
+    min-height: 484px;
+  }
 }
