@@ -3,3 +3,17 @@
   padding-left: 0;
   list-style: none;
 }
+
+@media screen and (max-width: 760px) {
+  .form-strokes__list {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .form-strokes__list {
+    display: flex;
+    flex-direction: column;
+  }
+}

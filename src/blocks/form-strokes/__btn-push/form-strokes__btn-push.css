@@ -3,3 +3,9 @@
   background-image: url(../../../images/btn-push.svg);
   flex-shrink: 0;
 }
+
+@media screen and (max-width: 1110px) {
+  .form-strokes__btn-push {
+    background-image: url(../../../images/btn-push-mobile.svg);
+  }
+}

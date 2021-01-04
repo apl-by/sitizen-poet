@@ -4,3 +4,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1110px) {
+  .form-strokes {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .form-strokes {
+    margin-top: 24px;
+  }
+}

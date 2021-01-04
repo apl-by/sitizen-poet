@@ -8,8 +8,26 @@
   background-color: #262524;
 }
 
+@media screen and (max-width: 1110px) {
+  .application__diagonal-box {
+    min-height: 540px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .application__diagonal-box {
+    min-height: 440px;
+  }
+}
+
 @media screen and (max-width: 570px) {
   .application__diagonal-box {
-    min-height: 250px;
+    min-height: 280px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .application__diagonal-box {
+    min-height: 240px;
   }
 }

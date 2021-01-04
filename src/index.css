@@ -27,6 +27,7 @@
 @import url(./blocks/btn/_mobile/btn_mobile_long.css);
 @import url(./blocks/btn/_type/btn_type_light.css);
 @import url(./blocks/btn/_type/btn_type_square.css);
+@import url(./blocks/btn/_selected/btn_selected.css);
 
 @import url(./blocks/btn-arrow/btn-arrow.css);
 
@@ -92,6 +93,7 @@
 @import url(./blocks/form-findwords/__btn/form-findwords__btn.css);
 
 @import url(./blocks/form-strokes/form-strokes.css);
+@import url(./blocks/form-strokes/__btn-mobile/form-strokes__btn-mobile.css);
 @import url(./blocks/form-strokes/__span/form-strokes__span.css);
 @import url(./blocks/form-strokes/__list/form-strokes__list.css);
 @import url(./blocks/form-strokes/__item/form-strokes__item.css);

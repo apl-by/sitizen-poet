@@ -1,3 +1,10 @@
 .form-strokes__input_size_l {
   font-size: 24px;
 }
+
+@media screen and (max-width: 570px) {
+  .form-strokes__input_size_l {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

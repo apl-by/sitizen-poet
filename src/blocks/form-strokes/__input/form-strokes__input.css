@@ -6,3 +6,10 @@
   border: 0;
   background-color: #fff;
 }
+
+@media screen and (max-width: 570px) {
+  .form-strokes__input {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

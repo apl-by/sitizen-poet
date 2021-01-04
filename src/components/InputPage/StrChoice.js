@@ -1,9 +1,12 @@
+import MediaQuery from "react-responsive";
 import { useEffect, useState } from "react";
 
 import Button from "../Buttons/Button";
 
-function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, item }) {
+function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, item, isSelected }) {
   const [newTag, setNewTag] = useState(item.tag);
+
+  const isSelectedBtn = isSelected[item.id] ? "selected" : false;
 
   useEffect(() => {
     setNewTag(item.tag);
@@ -32,7 +35,7 @@ function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, it
   };
 
   const handleClickAdd = () => {
-    onAdd(item.id, true, item.strUpperCaseTag);
+    onAdd(item.id, !isSelected[item.id], item.strUpperCaseTag);
   };
 
   const handleClickRefresh = () => {
@@ -42,34 +45,81 @@ function StrChoice({ children, onRefresh, onAdd, onNewSearch, onEdit, isEdit, it
   return (
     <>
       {!isEdit[item.id] && (
-        <li className="form-strokes__item">
-          {children}
-          {item.exist && (
-            <Button type="button" mix="form-strokes__btn-refresh" typeModifier="square" onClick={handleClickRefresh} />
-          )}
-          {!item.exist && <Button type="button" mix="form-strokes__btn-edit" typeModifier="square" onClick={handleClickEdit} />}
-          <Button
-            type="button"
-            mix="form-strokes__btn-push"
-            typeModifier="square"
-            onClick={handleClickAdd}
-            disabled={!item.exist}
-          />
-        </li>
+        <>
+          <li className="form-strokes__item">
+            {children}
+            <MediaQuery minWidth={571}>
+              {item.exist && (
+                <Button
+                  type="button"
+                  mix="form-strokes__btn-refresh"
+                  typeModifier="square"
+                  onClick={handleClickRefresh}
+                />
+              )}
+              {!item.exist && (
+                <Button type="button" mix="form-strokes__btn-edit" typeModifier="square" onClick={handleClickEdit} />
+              )}
+              <Button
+                type="button"
+                mix="form-strokes__btn-push"
+                typeModifier="square"
+                onClick={handleClickAdd}
+                selected={isSelectedBtn}
+                disabled={!item.exist}
+              />
+            </MediaQuery>
+          </li>
+
+          <MediaQuery maxWidth={570}>
+            <div className="form-strokes__btn-mobile">
+              {item.exist && (
+                <Button
+                  type="button"
+                  mix="form-strokes__btn-refresh"
+                  typeModifier="square"
+                  onClick={handleClickRefresh}
+                />
+              )}
+              {!item.exist && (
+                <Button type="button" mix="form-strokes__btn-edit" typeModifier="square" onClick={handleClickEdit} />
+              )}
+              <Button
+                type="button"
+                mix="form-strokes__btn-push"
+                typeModifier="square"
+                onClick={handleClickAdd}
+                selected={isSelectedBtn}
+                disabled={!item.exist}
+              />
+            </div>
+          </MediaQuery>
+        </>
       )}
       {!item.exist && isEdit[item.id] && (
-        <form className="form-strokes__item" name="inputForm" onSubmit={handleSubmitInput}>
-          <input
-            type="text"
-            name="tag"
-            className="form-strokes__input form-strokes__input_size_l"
-            value={newTag}
-            onChange={handleChange}
-            autoFocus={true}
-          />
-          <Button type="submit" mix="form-strokes__btn-confirm"  typeModifier="square"/>
-          <Button type="button" mix="form-strokes__btn-push" typeModifier="square" disabled={true} />
-        </form>
+        <>
+          <form className="form-strokes__item" name="inputForm" onSubmit={handleSubmitInput}>
+            <input
+              type="text"
+              name="tag"
+              className="form-strokes__input form-strokes__input_size_l"
+              value={newTag}
+              onChange={handleChange}
+              autoFocus={true}
+            />
+            <MediaQuery minWidth={571}>
+              <Button type="submit" mix="form-strokes__btn-confirm" typeModifier="square" />
+              <Button type="button" mix="form-strokes__btn-push" typeModifier="square" disabled={true} />
+            </MediaQuery>
+          </form>
+
+          <MediaQuery maxWidth={570}>
+            <div className="form-strokes__btn-mobile">
+              <Button type="submit" mix="form-strokes__btn-confirm" typeModifier="square" onClick={handleSubmitInput} />
+              <Button type="button" mix="form-strokes__btn-push" typeModifier="square" disabled={true} />
+            </div>
+          </MediaQuery>
+        </>
       )}
     </>
   );
