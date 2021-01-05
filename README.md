@@ -28,7 +28,7 @@
 
 ## Дизайн-проект
 
-Figma макет доступен по [этой ссылке](https://www.figma.com/file/OHmM1lMwTO7RdnehnsgdPx/%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B8%D0%BD-%D0%BF%D0%BE%D1%8D%D1%82-UI-20-12-20).
+Figma макет доступен по ссылке:[Ссылка на мaкет Figma](https://www.figma.com/file/OHmM1lMwTO7RdnehnsgdPx/%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B8%D0%BD-%D0%BF%D0%BE%D1%8D%D1%82-UI-20-12-20).
 
 ## Использованные языки, технологии и методологии
 
@@ -46,5 +46,7 @@ Figma макет доступен по [этой ссылке](https://www.figma
 
 ## Как использовать
 
-Для сборки проекта склонируйте репозиторий и введите команду npm install. Для запуска проекта введите команду npm run start. Демо доступно на [этой странице](https://apl-by.github.io/sitizen-poet/).
+Демо доступно по ссылке: [Демо версия сайта](https://apl-by.github.io/sitizen-poet/).
+
+Для сборки проекта склонируйте репозиторий и введите команду npm install. Для запуска проекта введите команду npm run start.
 Работоспособность проверена в Google Chrome и Яндекс.Браузере.
