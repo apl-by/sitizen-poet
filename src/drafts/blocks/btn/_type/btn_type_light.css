@@ -1,0 +1,13 @@
+.btn_type_light {
+  width: 160px;
+  height: 62px;
+  color: #8d8d8d;
+  background-color: #fff;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.btn:active {
+  color: #fff;
+  background-color: #d00000;
+}

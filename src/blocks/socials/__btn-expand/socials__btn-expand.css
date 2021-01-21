@@ -1,0 +1,15 @@
+.socials__btn-expand {
+  width: 36px;
+  height: 36px;
+  transition: opacity 0.1s ease-out;
+  border: 0;
+  background-color: transparent;
+  background-image: url(../../../images/icon-expand.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials__btn-expand:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

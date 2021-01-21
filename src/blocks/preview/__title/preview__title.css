@@ -1,0 +1,11 @@
+.preview__title {
+  align-self: center;
+  margin: 0;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 570px) {
+  .preview__title {
+    font-size: 14px;
+  }
+}

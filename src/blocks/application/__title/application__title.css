@@ -1,0 +1,18 @@
+.application__title {
+  z-index: 1;
+  margin-top: 8px;
+  color: #fff;
+}
+
+@media screen and (max-width: 760px) {
+  .application__title {
+    margin-top: 23px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .application__title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}

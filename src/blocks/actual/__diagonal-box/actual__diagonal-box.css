@@ -1,0 +1,15 @@
+.actual__diagonal-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 855px;
+  transform: skewY(15deg) translateY(-50%);
+  background-color: #262524;
+}
+
+@media screen and (max-width: 570px) {
+  .actual__diagonal-box {
+    min-height: 420px;
+  }
+}

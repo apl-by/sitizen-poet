@@ -1,0 +1,12 @@
+.assembly__item {
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  margin-top: 24px;
+  /* padding: 16px 10px; */
+  background-color: #c4c4c4;
+}
+
+.assembly__item:first-of-type {
+  margin-top: 0;
+}

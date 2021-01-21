@@ -1,0 +1,31 @@
+.hero__phrase {
+  position: absolute;
+  right: 13.75%;
+  bottom: 110px;
+  left: 0;
+  width: 45%;
+  min-height: 195px;
+  margin-left: auto;
+  transform: skewY(15deg) rotate(-15deg);
+  background-image: url(../../../images/hero-phrase.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media screen and (max-width: 760px) {
+  .hero__phrase {
+    bottom: 40px;
+    width: 400px;
+    min-height: 100px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .hero__phrase {
+    bottom: 21px;
+    width: 70%;
+    right: 9%;
+    min-height: 75px;
+  }
+}

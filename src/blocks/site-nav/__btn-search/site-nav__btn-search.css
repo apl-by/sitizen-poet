@@ -1,0 +1,23 @@
+.site-nav__btn-search {
+  width: 99px;
+  padding: 0;
+  transition: background-color 0.1s ease-out;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background-color: transparent;
+  background-image: url(../../../images/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site-nav__btn-search:hover {
+  cursor: pointer;
+  background-color: #ff6464;
+}
+
+@media screen and (max-width: 1110px) {
+  .site-nav__btn-search {
+    width: 70px;
+  }
+}

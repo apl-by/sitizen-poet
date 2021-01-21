@@ -1,0 +1,10 @@
+.logo_place_footer {
+  color: #fff;
+}
+
+@media screen and (max-width: 570px) {
+  .logo_place_footer {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}

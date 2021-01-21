@@ -1,0 +1,11 @@
+.site-nav {
+  display: flex;
+  flex-grow: 1;
+  max-width: 1110px;
+}
+
+@media screen and (max-width: 760px) {
+  .site-nav {
+    flex-direction: column;
+  }
+}

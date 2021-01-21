@@ -1,0 +1,12 @@
+.title_size_medium {
+  font-family: "TT lakes", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 570px) {
+  .title_size_medium {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

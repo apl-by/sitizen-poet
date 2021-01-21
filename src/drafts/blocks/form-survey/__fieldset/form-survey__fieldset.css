@@ -1,0 +1,7 @@
+.form-survey__fieldset {
+  margin-top: 50px;
+}
+
+.form-survey__fieldset:first-of-type {
+  margin-top: 0;
+}

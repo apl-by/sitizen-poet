@@ -1,0 +1,21 @@
+.form-survey__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px 30px;
+  margin: 0;
+  margin-top: 48px;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 760px) {
+  .form-survey__list {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .form-survey__list {
+    gap: 10px 10px;
+  }
+}

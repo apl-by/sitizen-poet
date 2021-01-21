@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="pages/index.css">
+  <title>Заполнение обращения | Гражданин-поэт</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <nav class="site-nav">
+        <a
+          class="link logo logo_place_header site-nav__logo"
+          href="#/"
+        >Гражданин поэт</a>
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a
+              href="#"
+              class="site-nav__link"
+            >Инициативы</a>
+          </li>
+          <li class="site-nav__item">
+            <a
+              href="#"
+              class="site-nav__link"
+            >Мои предложения</a>
+          </li>
+          <li class="site-nav__item">
+            <a
+              href="#"
+              class="site-nav__link"
+            >Кабинет</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="site-nav__btn-search"
+        ></button>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="application">
+        <div class="application__diagonal-box"></div>
+        <div class="application__content">
+          <div class="application__top"><button
+              class="application__btn-back"
+              type="button"
+              aria-label="Назад"
+            ></button>
+            <p class="application__counter">3/3</p>
+          </div>
+          <form
+            name="bioForm"
+            class="form-bio"
+          >
+            <div class="form-bio__data">
+              <h2 class="title form-bio__title">
+                Оформите документ</h2>
+              <fieldset class="fieldset form-bio__fieldset">
+                <h3 class="title title_size_medium form-bio__title">Введите
+                  адресата</h3>
+                <textarea class="form-bio__recipient"></textarea>
+              </fieldset>
+              <fieldset class="fieldset form-bio__fieldset">
+                <h3
+                  class="title title_size_medium form-bio__title  form-bio__title_type_dark"
+                >Введите ваши
+                  данные</h3><label
+                  for="fio"
+                  class="form-bio__label"
+                >ФИО*</label><input
+                  type="text"
+                  name="fioInput"
+                  id="fio"
+                  placeholder="Маяковский Владимир Владимирович"
+                  class="form-bio__input"
+                ><label
+                  for="address"
+                  class="form-bio__label"
+                >Адрес*</label><input
+                  type="text"
+                  name="addressInput"
+                  id="address"
+                  placeholder="Улица, дом, город, область"
+                  class="form-bio__input"
+                ><label
+                  for="tel-number"
+                  class="form-bio__label"
+                >Телефон*</label><input
+                  type="tel"
+                  name="fiotelNumberInput"
+                  id="tel-number"
+                  placeholder="+7 XXX XXX-XX-XX"
+                  class="form-bio__input"
+                ><label
+                  for="date"
+                  class="form-bio__label"
+                >Дата обращения</label><input
+                  type="date"
+                  name="dateInput"
+                  id="date"
+                  placeholder="ДД.ММ.ГГГГ"
+                  class="form-bio__input"
+                >
+              </fieldset>
+              <p class="form-bio__info">Электронный документ будет доступен для
+                распечатки и редактирования в личном кабинете.</p>
+            </div>
+            <div class="form-bio__preview">
+              <div class="preview">
+                <div class="preview__top">
+                  <p class="preview__recipient">Волкову Евгению Николаевичу,
+                    градоначальнику г. Москва</p>
+                  <p class="preview__sender">от Маяковского Владимира
+                    Владимировича</p>
+                  <p class="preview__adress">Адрес:</p>
+                  <p class="preview__tel">Телефон:</p>
+                </div>
+                <div class="preview__body">
+                  <p class="preview__title">Обращение</p>
+                  <div class="preview__main-text">
+                    <p class="preview__stroke">Блажен, кто под крылом своих
+                      домашних лар</p>
+                    <p class="preview__stroke">у подъезда, на скамейке</p>
+                    <p class="preview__stroke">Людмила светлый взор возводит,
+                    </p>
+                  </div>
+                </div>
+                <div class="preview__footer">
+                  <p class="preview__date">16.12.2020 г.</p>
+                  <p class="preview__signature">/ В.В. Маяковский</p>
+                </div>
+              </div><button
+                type="submit"
+                class="btn btn_size_m application__control"
+              >Отправить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__columns">
+        <div class="footer__column footer__column_content_copyright">
+          <a
+            class="link logo logo_place_footer"
+            href="#/"
+          >Гражданин поэт</a>
+          <p class="footer__author">© 2020 / Team39</p>
+        </div>
+        <nav class="footer__column footer__column_content_info">
+          <ul class="footer__column-links">
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >О проекте</a></li>
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >Пресса</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__column footer__column_content_contacts">
+          <ul class="footer__column-links">
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >Контакты</a></li>
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >Сотрудничество</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

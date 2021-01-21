@@ -1,0 +1,14 @@
+.card-actual__text {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: 570px) {
+  .card-actual__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

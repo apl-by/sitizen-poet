@@ -1,0 +1,4 @@
+.form-strokes__btn-confirm {
+  background-image: url(../../../images/btn-confirm.svg);
+  flex-shrink: 0;
+}

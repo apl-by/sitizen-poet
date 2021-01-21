@@ -1,0 +1,14 @@
+.form-comment__input-area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 760px) {
+  .form-comment__input-area {
+    flex-direction: column;
+    /* max-width: calc(100% - 30px);
+    width: 100%; */
+  }
+}

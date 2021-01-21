@@ -1,0 +1,17 @@
+.taglist__item {
+  box-sizing: border-box;
+  margin-right: 30px;
+  padding: 19px 16px;
+  color: #8d8d8d;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media screen and (max-width: 570px) {
+  .taglist__item {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}

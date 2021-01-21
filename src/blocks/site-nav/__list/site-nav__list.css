@@ -1,0 +1,19 @@
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0 30px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 1110px) {
+  .site-nav__list {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .site-nav__list {
+    flex-direction: column;
+  }
+}

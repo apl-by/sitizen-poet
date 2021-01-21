@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 227px);
+  flex-grow: 1;
+  position: relative;
+}

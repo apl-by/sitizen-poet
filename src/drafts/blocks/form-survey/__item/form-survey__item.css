@@ -1,0 +1,20 @@
+.form-survey__item {
+  position: relative;
+  width: 180px;
+  height: 62px;
+  margin-right: 30px;
+  transition: opacity 0.1s ease-out;
+  color: #8d8d8d;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.form-survey__item:last-child {
+  margin-right: 0;
+}
+
+.form-survey__item:hover {
+  opacity: 0.7;
+}

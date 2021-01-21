@@ -1,0 +1,29 @@
+.form-findwords__valid {
+  position: absolute;
+  bottom: 1px;
+  left: 24px;
+  font-size: 22px;
+  color: red;
+}
+
+@media screen and (max-width: 760px) {
+  .form-findwords__valid {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .form-findwords__valid {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form-findwords__valid {
+    font-size: 11px;
+    line-height: 12px;
+    left: 2px;
+  }
+}

@@ -1,0 +1,26 @@
+.btn {
+  max-width: 351px;
+  width: 100%;
+  height: 82px;
+  padding: 0;
+  transition: opacity 0.1s ease-out;
+  color: #fff;
+  border: 0;
+  background-color: #262524;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn:hover:enabled {
+  opacity: 0.7;
+}
+
+.btn:active {
+  color: #fff;
+  background-color: #d00000;
+}
+
+.btn:disabled {
+  color: #fff;
+  background-color: #e5e5e5;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="pages/index.css">
+  <title>Заполнение обращения | Гражданин-поэт</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <nav class="site-nav">
+        <a
+          class="link logo logo_place_header site-nav__logo"
+          href="#/"
+        >Гражданин поэт</a>
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a
+              href="#"
+              class="site-nav__link"
+            >Инициативы</a>
+          </li>
+          <li class="site-nav__item">
+            <a
+              href="#"
+              class="site-nav__link"
+            >Мои предложения</a>
+          </li>
+          <li class="site-nav__item">
+            <a
+              href="#"
+              class="site-nav__link"
+            >Кабинет</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="site-nav__btn-search"
+        ></button>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="application">
+        <div class="application__diagonal-box"></div>
+        <div class="application__content">
+          <div class="application__top"><button
+              class="application__btn-back"
+              type="button"
+              aria-label="Назад"
+            ></button>
+            <p class="application__counter">2/3</p>
+          </div>
+          <h2 class="title application__title">Введите обращение</h2>
+          <p class="application__subtitle">Не больше 6 слов</p>
+          <form
+            name="userWordsForm"
+            class="form-findwords"
+          ><input
+              name="input"
+              type="text"
+              class="form-findwords__input"
+              value="окно лампа"
+            ><button
+              type="submit"
+              class="btn btn_size_m form-findwords__btn"
+            >Найти строки</button></form>
+          <div class="form-strokes form-strokes__columns">
+            <ul class="form-strokes__list">
+              <li class="form-strokes__item">
+                <p class="form-strokes__input">Не весна под <span
+                    class="form-strokes__span"
+                  >окно</span>м.</p><button
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-refresh"
+                ></button><button
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-push"
+                ></button>
+              </li>
+              <li class="form-strokes__item">
+                <p class="form-strokes__input">Как каждую ночь, <span
+                    class="form-strokes__span"
+                  >лампа</span>дка дрожит у иконы.</p><button
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-refresh"
+                ></button><button
+                  type="button"
+                  class="btn btn_type_square form-strokes__btn-push"
+                ></button>
+              </li>
+            </ul>
+            <div class="assembly form-strokes__assembly">
+              <ul class="assembly__list">
+                <li class="assembly__item false">
+                  <p class="assembly__text">Не весна под <span
+                      class="form-strokes__span"
+                    >окно</span>м.</p><button
+                    type="button"
+                    class="assembly__btn-close"
+                  ></button>
+                </li>
+                <li class="assembly__item false">
+                  <p class="assembly__text">Как каждую ночь, <span
+                      class="form-strokes__span"
+                    >лампа</span>дка дрожит у иконы.</p><button
+                    type="button"
+                    class="assembly__btn-close"
+                  ></button>
+                </li>
+              </ul>
+            </div>
+          </div><button
+            type="button"
+            class="btn btn_size_m application__control"
+          >Далее</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__columns">
+        <div class="footer__column footer__column_content_copyright">
+          <a
+            class="link logo logo_place_footer"
+            href="#/"
+          >Гражданин поэт</a>
+          <p class="footer__author">© 2020 / Team39</p>
+        </div>
+        <nav class="footer__column footer__column_content_info">
+          <ul class="footer__column-links">
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >О проекте</a></li>
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >Пресса</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__column footer__column_content_contacts">
+          <ul class="footer__column-links">
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >Контакты</a></li>
+            <li class="footer__item">
+              <a
+                href="#"
+                class="link footer__link"
+              >Сотрудничество</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

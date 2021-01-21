@@ -1,0 +1,29 @@
+.form-strokes__assembly {
+  width: 540px;
+  min-height: 490px;
+  margin-left: 30px;
+  background-color: #fff;
+  /* width: 100%; */
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1110px) {
+  .form-strokes__assembly {
+    margin-left: 0;
+    min-height: 400px;
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .form-strokes__assembly {
+    max-width: 650px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .form-strokes__assembly {
+    margin-top: 12px;
+  }
+}

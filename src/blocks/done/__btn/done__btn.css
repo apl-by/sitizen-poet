@@ -1,0 +1,24 @@
+.done__btn {
+  z-index: 1;
+  align-self: flex-end;
+  margin-top: 28px;
+}
+
+@media screen and (max-width: 1110px) {
+  .done__btn {
+    margin-right: calc((100vw - 730px) / 2);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .done__btn {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .done__btn {
+    margin-right: 0;
+    margin-top: 24px;
+  }
+}

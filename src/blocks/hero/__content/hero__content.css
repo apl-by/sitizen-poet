@@ -1,0 +1,24 @@
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1110px) {
+  .hero__content {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .hero__content {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero__content {
+    margin: 0 5px;
+  }
+}

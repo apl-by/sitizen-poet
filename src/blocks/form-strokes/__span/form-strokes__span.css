@@ -1,0 +1,11 @@
+.form-strokes__span {
+  font-size: 24px;
+  color: #d00000;
+}
+
+@media screen and (max-width: 570px) {
+  .form-strokes__span {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

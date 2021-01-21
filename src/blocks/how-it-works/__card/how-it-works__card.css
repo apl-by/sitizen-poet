@@ -1,0 +1,9 @@
+.how-it-works__card {
+  margin: 48px 0 0 0;
+}
+
+@media screen and (max-width: 570px) {
+  .how-it-works__card {
+    margin: 24px 0 0 0;
+  }
+}

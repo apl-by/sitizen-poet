@@ -1,0 +1,7 @@
+.overview__image {
+  max-width: 445px;
+  max-height: 296px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}

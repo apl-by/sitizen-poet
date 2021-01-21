@@ -1,0 +1,10 @@
+.overview {
+  margin-top: 38px;
+  background-color: #262524;
+}
+
+@media screen and (max-width: 570px) {
+  .overview {
+    padding: 0 15px 0;
+  }
+}

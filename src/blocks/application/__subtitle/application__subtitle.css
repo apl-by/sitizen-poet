@@ -1,0 +1,12 @@
+.application__subtitle {
+  z-index: 1;
+  margin: 7px 0 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 570px) {
+  .form-strokes {
+    font-size: 16px;
+  }
+}

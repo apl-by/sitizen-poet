@@ -1,0 +1,13 @@
+.site-nav_type_mobil {
+  position: absolute;
+  top: 99px;
+  z-index: 100;
+  width: 100%;
+  background-color: #d00000;
+}
+
+@media screen and (max-width: 570px) {
+  .site-nav_type_mobil {
+    top: 69px;
+  }
+}

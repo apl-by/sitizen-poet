@@ -1,0 +1,32 @@
+.done__cards {
+  z-index: 1;
+  display: grid;
+  margin: 38px 0 0;
+  padding-left: 0;
+  list-style: none;
+
+  grid-template-columns: 730px 350px;
+  grid-template-rows: auto;
+  grid-gap: 42px 30px;
+}
+
+@media screen and (max-width: 1110px) {
+  .done__cards {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: flex-end;
+    margin: 38px auto 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .done__cards {
+    margin: 38px 15px 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .done__cards {
+    margin: 32px 0 0;
+    grid-gap: 24px 0;
+  }
+}

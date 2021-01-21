@@ -1,0 +1,8 @@
+.form-strokes__input {
+  display: inline;
+  width: 100%;
+  min-height: 100%;
+  padding: 2px 0 0 5px;
+  border: 0;
+  background-color: white;
+}

@@ -1,0 +1,24 @@
+.hero__button {
+  z-index: 99;
+  align-self: flex-end;
+  margin: 513px 0 148px;
+}
+
+@media screen and (max-width: 1110px) {
+  .hero__button {
+    margin: 500px 0 80px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .hero__button {
+    margin: 600px 0 16px;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .hero__button {
+    margin: 433px 0 16px;
+  }
+}

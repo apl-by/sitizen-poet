@@ -1,0 +1,10 @@
+.form-bio__label {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 570px) {
+  .form-bio__label {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

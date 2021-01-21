@@ -1,0 +1,7 @@
+.how-it-works__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  min-height: 100px;
+  margin: 64px auto 0;
+}

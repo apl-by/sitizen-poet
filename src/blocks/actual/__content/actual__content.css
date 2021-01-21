@@ -1,0 +1,12 @@
+.actual__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  margin: 73px auto 0;
+}
+
+@media screen and (max-width: 570px) {
+  .actual__content {
+    margin: 68px auto 0;
+  }
+}

@@ -1,0 +1,15 @@
+.form-strokes__input {
+  display: inline;
+  width: 100%;
+  min-height: 100%;
+  padding: 2px 0 0 5px;
+  border: 0;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 570px) {
+  .form-strokes__input {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
