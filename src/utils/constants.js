@@ -14,7 +14,7 @@ import done2 from "../images/done-2.jpg";
 
 export const regexpInputValid = /^([а-яА-Я]+\s{1}){0,5}[а-яА-Я]*$/;
 
-export const URL = "https://buymebuyme.xyz";
+export const URL = "https://api.citizen-poet.apl-by.site";
 
 export const headerLinks = [
   { id: 1, name: "Инициативы", path: "/" },

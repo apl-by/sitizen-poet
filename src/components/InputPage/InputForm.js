@@ -16,7 +16,7 @@ function InputForm({ onChange, value, onSearchSubmit, invalidInput }) {
           value={value}
           onChange={onChange}
           autoFocus={true}
-          autoComplete="off"
+          // autoComplete="off"
         />
         <span className="form-findwords__valid">{invalidInput}</span>
       </label>
