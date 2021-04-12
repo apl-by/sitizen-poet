@@ -17,7 +17,6 @@ import ButtonArrow from "./Buttons/ButtonArrow";
 
 function App() {
   const history = useHistory();
-
   // -------- Данные из пользовательского ввода--------------------
 
   const [currentInput, setCurrentInput] = useState("");
